@@ -62,36 +62,6 @@
         "libXtst"
       ]
     },
-    "snap": {
-      "publish": [
-        {
-          "provider": "bintray",
-          "package": "Editor-YAML-Mensageria",
-          "repo": "Editor-YAML-Mensageria-Snap",
-          "user": "gladson",
-          "owner": "gladson"
-        }
-      ],
-      "artifactName": "Configurador_Mensageria_${version}.${ext}",
-      "confinement": "strict",
-      "summary": "Software Fazer alterações em arquivos YML da Mensageria graficamente.",
-      "grade": "stable",
-      "buildPackages": [],
-      "stagePackages": [
-        "libnotify4",
-        "libappindicator1",
-        "libxtst6",
-        "libnss3",
-        "libxss1",
-        "fontconfig-config",
-        "gconf2",
-        "libasound2",
-        "pulseaudio"
-      ],
-      "plugs": [
-        "default"
-      ]
-    },
     "mac": {
       "target": [
         "dmg"

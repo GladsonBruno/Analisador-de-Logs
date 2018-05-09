@@ -20,7 +20,7 @@ class Evento_S {
 }
 
 function RetornoConsultaEXP(EXP, Conteudo){
-    let data_hora = /(^\d{2})\-(\d{2})\-(\w{4})\s(\d{2}:\d{2}:\d{2})\.\d{3}.*/;
+    let data_hora = /(^\d{2})\-(\d{2})\-(\w{4})\s(\d{2}):(\d{2}):(\d{2})\.\d{3}.*/;
     let Descricao = EXP.exec(Conteudo.match(EXP))[1];
     
     let statusEvento = /\b\w{1}$/gm;
@@ -36,7 +36,10 @@ function RetornoConsultaEXP(EXP, Conteudo){
             "Mes": data_hora.exec(Conteudo)[2],
             "Dia": data_hora.exec(Conteudo)[1]
         },
-        "Hora": data_hora.exec(Conteudo)[4]
+        "Hora": data_hora.exec(Conteudo)[4],
+        "Minuto": data_hora.exec(Conteudo)[5],
+        "Segundos": data_hora.exec(Conteudo)[6],
+        "HoraCompleta": data_hora.exec(Conteudo)[4] + ":" + data_hora.exec(Conteudo)[5] + ":" + data_hora.exec(Conteudo)[6]
     };
 
     return novaOcorrencia;
@@ -141,11 +144,12 @@ function PesquisarPorID(id){
             $(".conteudo").append(ocorrencia);
             console.log(Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.length);
             for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.length; i++){
+                let hora = Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
                 ocorrencia = `
                     <div class="timeline__box">
                         <div class="timeline__date">
                             <span class="timeline__hora"> Ocorrência </span>
-                            <span class="timeline__hora"> 0`+ (i + 1) +` </span>
+                            <span class="timeline__hora"> `+ hora +` </span>
                         </div>
                         <div class="timeline__post">
                         <div class="timeline__content" id="EventoNegocio0`+ i +`">
@@ -162,12 +166,12 @@ function PesquisarPorID(id){
         
         
             for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.length; i++){
-
+                let hora = Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
                 ocorrencia = `
                     <div class="timeline__box">
                         <div class="timeline__date">
                             <span class="timeline__hora"> Ocorrencia </span>
-                            <span class="timeline__hora"> 0 `+ (i + 1)  +` </span>
+                            <span class="timeline__hora"> `+ hora  +` </span>
                         </div>
                         <div class="timeline__post">
                         <div class="timeline__content" id="EventoNegocio0`+ i +`">
@@ -181,7 +185,7 @@ function PesquisarPorID(id){
                     $("#EventoNegocio0" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
                 }
             }
-        console.log(Evento);
+        $(".timeline__year").html("").html(id);
     });
 }
 PesquisarPorID("ID1040984700000002018041415415100002");

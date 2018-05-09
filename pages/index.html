@@ -9,15 +9,30 @@
         window.jQuery = window.$ = require('jquery');
     </script>
     <script src="../scripts/leitor.js"></script>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/timeline.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
 </head>
 <body>
+    <nav>
+        <div class="nav-wrapper cyan darken-3">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="page">
         <div class="page__demo">
             <div class="main-container page__container">
                 <div class="timeline">
                     <div class="timeline__group">
-                    <span class="timeline__year">Ciclo de Vida do Evento</span>
+                    <span class="timeline__year"></span>
                         <div class="conteudo">
                             <!-- Conteudo -->
                         </div>
@@ -28,6 +43,6 @@
     </div>
 
       
-
+    <script src="../scripts/hammer.min.js" onload="window.Hammer = module.exports;"></script>
 </body>
 </html>

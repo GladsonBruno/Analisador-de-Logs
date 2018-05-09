@@ -21,7 +21,7 @@ app.on('ready', () => {
         height: screenSize.height,
         width: screenSize.width,
         minHeight: 600,
-        minWidth: 800
+        minWidth: 1000
     });
 
 
