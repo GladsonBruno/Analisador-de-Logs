@@ -1,0 +1,55 @@
+.conteudo {
+    width: 90%;
+}
+
+#btn-carregar-log, #btn-analisar{
+    margin-left: 20px;
+}
+
+body {
+    background-color: #eceff1;
+}
+
+#caminho-log::placeholder, #id_analisado::placeholder {
+    color: #546e7a;
+    opacity: 1;
+}
+
+
+
+/*
+Estilização do spinner de carregamento
+*/
+@media only screen and (min-width : 601px) and (max-width : 1260px) {
+    .toast {
+    width: 80%;
+    border-radius: 0;
+    margin-top: 25% !important;
+    margin-left: 25%;
+    margin-right: 20%;
+} }
+    
+    @media only screen and (min-width : 1261px) {
+    .toast {
+    width: 80%;
+    border-radius: 0;
+    margin-top: 25% !important;
+    margin-left: 25%;
+    margin-right: 20%;
+} }
+    
+    @media only screen and (min-width : 601px) and (max-width : 1260px) {
+    #toast-container {
+    min-width: 90%;
+    bottom: 0%;
+    top: 50%;
+    right: 0%;
+    left: 0%;} }
+    
+    @media only screen and (min-width : 1261px) {
+    #toast-container {
+    min-width: 100%;
+    bottom: 0%;
+    top: 50%;
+    right: 0%;
+    left: 0%; } }

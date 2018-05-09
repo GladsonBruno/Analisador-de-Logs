@@ -8,41 +8,58 @@
     <script>
         window.jQuery = window.$ = require('jquery');
     </script>
-    <script src="../scripts/leitor.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="../css/timeline.css">
+    <link rel="stylesheet" href="../css/index.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <script src="../scripts/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+    <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="../scripts/index.js"></script>
 </head>
 <body>
     <nav>
         <div class="nav-wrapper cyan darken-3">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+                <li><a href="#">Analisador de LOGS</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="page">
-        <div class="page__demo">
-            <div class="main-container page__container">
-                <div class="timeline">
-                    <div class="timeline__group">
-                    <span class="timeline__year"></span>
-                        <div class="conteudo">
-                            <!-- Conteudo -->
-                        </div>
-                    </div>
-                </div>
+    <div class="row conteudo">
+        <div class="section">
+        <h5>Análise de LOG</h5>
+            <div class="input-field col m12">
+                <label for="caminho-log">Caminho Certificado</label>
+                <input type="text" placeholder="Caminho LOG" class='col m9' disabled id="caminho-log" required>
+                <span class="helper-text" data-error="" data-success=""></span>
+                <button class="btn" class="col m2" id="btn-carregar-log" onclick="CarregarLOG()">Carregar Arquivo de LOG</button>
+            </div>
+            <div class="input-field col m12">
+                <label for="ID_Analisado">ID a ser analisado</label>
+                <input type="text" placeholder="ID a ser analisado" class='col m9' id="id_analisado" required>
+                <span class="helper-text" data-error="" data-success=""></span>
+                <a onclick="RedirecionaPaginaAnalisar()" id="btn-analisar" class="col m2 waves-effect waves-light btn-flat blue darken-1 white-text center">Analisar</a>
             </div>
         </div>
     </div>
 
-      
-    <script src="../scripts/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+    
+    <!-- Inicio Modal Erro -->
+    <div id="modalErro" class="modal container">
+        <div class="modal-content">
+            <!-- Cabeçalho Modal -->
+            <div class="modal-header">
+                    <h5><i class="material-icons">error</i>Erro</h5>
+                </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer transparent">
+                <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat  red accent-3 white-text">Voltar</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal Erro -->
+
+    
 </body>
 </html>
