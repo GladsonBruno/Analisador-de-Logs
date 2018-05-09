@@ -1,0 +1,494 @@
+16-02-2018 14:20:59.452 [main] INFO  com.arterh.esocial.Application.logStarting - Starting Application v1.1.12 on BRWS0381 with PID 3452 (E:\esocial\mensageria\producao\esocial-integrador-serpro-1.1.14.jar started by SVC-BR_ESCL-BRWS0381 in E:\esocial\mensageria\producao)
+16-02-2018 14:20:59.452 [main] DEBUG com.arterh.esocial.Application.logStarting - Running with Spring Boot v1.3.5.RELEASE, Spring v4.2.6.RELEASE
+16-02-2018 14:20:59.452 [main] INFO  com.arterh.esocial.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+16-02-2018 14:20:59.655 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11d12a5: startup date [Fri Feb 16 14:20:59 BRST 2018]; root of context hierarchy
+16-02-2018 14:21:01.921 [main] INFO  com.arterh.esocial.Application.logStarting - Starting Application v1.1.14 on BRWS0381 with PID 7560 (E:\esocial\mensageria\producao\esocial-leitor-eventos-1.1.14.jar started by SVC-BR_ESCL-BRWS0381 in E:\esocial\mensageria\producao)
+16-02-2018 14:21:01.921 [main] DEBUG com.arterh.esocial.Application.logStarting - Running with Spring Boot v1.3.5.RELEASE, Spring v4.2.6.RELEASE
+16-02-2018 14:21:01.921 [main] INFO  com.arterh.esocial.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+16-02-2018 14:21:02.109 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34660d: startup date [Fri Feb 16 14:21:02 BRST 2018]; root of context hierarchy
+16-02-2018 14:21:03.421 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$26d15e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16-02-2018 14:21:04.390 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 5556 (http)
+16-02-2018 14:21:04.452 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80453b3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16-02-2018 14:21:04.499 [main] INFO  o.a.catalina.core.StandardService.log - Starting service Tomcat
+16-02-2018 14:21:04.499 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.0.33
+16-02-2018 14:21:05.374 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 5555 (http)
+16-02-2018 14:21:05.390 [main] INFO  o.a.catalina.core.StandardService.log - Starting service Tomcat
+16-02-2018 14:21:05.390 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.0.33
+16-02-2018 14:21:05.390 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+16-02-2018 14:21:05.390 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 5735 ms
+16-02-2018 14:21:05.608 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+16-02-2018 14:21:05.608 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 3499 ms
+16-02-2018 14:21:06.077 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+16-02-2018 14:21:06.077 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+16-02-2018 14:21:06.093 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16-02-2018 14:21:06.093 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16-02-2018 14:21:06.093 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+16-02-2018 14:21:06.265 [localhost-startStop-1] INFO  o.s.b.c.e.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+16-02-2018 14:21:06.281 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+16-02-2018 14:21:06.281 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16-02-2018 14:21:06.281 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16-02-2018 14:21:06.281 [localhost-startStop-1] INFO  o.s.b.c.e.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+16-02-2018 14:21:07.796 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34660d: startup date [Fri Feb 16 14:21:02 BRST 2018]; root of context hierarchy
+16-02-2018 14:21:07.843 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11d12a5: startup date [Fri Feb 16 14:20:59 BRST 2018]; root of context hierarchy
+16-02-2018 14:21:07.968 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/healthcheck]}" onto public java.lang.String com.arterh.esocial.Application.home()
+16-02-2018 14:21:07.983 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16-02-2018 14:21:07.983 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2018 14:21:08.030 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/healthcheck]}" onto public java.lang.String com.arterh.esocial.Application.home()
+16-02-2018 14:21:08.046 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2018 14:21:08.046 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16-02-2018 14:21:08.077 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2018 14:21:08.077 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2018 14:21:08.155 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2018 14:21:08.155 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2018 14:21:08.171 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2018 14:21:08.280 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2018 14:21:08.483 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+16-02-2018 14:21:08.515 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+16-02-2018 14:21:08.624 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 5555 (http)
+16-02-2018 14:21:08.624 [main] INFO  com.arterh.esocial.Application.logStarted - Started Application in 8.281 seconds (JVM running for 9.285)
+16-02-2018 14:21:08.702 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+16-02-2018 14:21:08.827 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+16-02-2018 14:21:09.577 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 5556 (http)
+16-02-2018 14:21:09.593 [main] INFO  com.arterh.esocial.Application.logStarted - Started Application in 12.141 seconds (JVM running for 13.538)
+16-02-2018 14:21:33.706 [http-nio-5555-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16-02-2018 14:21:33.706 [http-nio-5555-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+16-02-2018 14:21:33.769 [http-nio-5555-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 63 ms
+16-02-2018 14:21:34.191 [http-nio-5556-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16-02-2018 14:21:34.191 [http-nio-5556-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+16-02-2018 14:21:34.284 [http-nio-5556-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 93 ms
+16-02-2018 14:29:30.053 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - Preparando novo lote de eventos para envio para ambiente de: PRE-PRODUCAO
+16-02-2018 14:29:30.069 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Empregador: 76487032
+16-02-2018 14:29:30.069 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Transmissor: 76487032000125
+16-02-2018 14:29:30.069 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	IDs dos eventos do lote: 
+16-02-2018 14:29:30.069 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$3 - 		ID1764870320000002018020110262200006
+16-02-2018 14:29:30.897 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$2 - Atualizando o ID: ID1764870320000002018020110262200006 no banco de dados como extraido para processamento.
+16-02-2018 14:29:31.709 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:29:32.756 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:29:34.775 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:29:38.787 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:29:46.809 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:30:02.830 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:30:34.859 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:31:38.878 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:33:46.904 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted
+16-02-2018 14:38:02.911 [DefaultMessageListenerContainer-1] WARN  o.s.j.l.DefaultMessageListenerContainer.invokeErrorHandler - Execution of JMS message listener failed, and no ErrorHandler has been set.
+org.springframework.jms.listener.adapter.ListenerExecutionFailedException: Listener method 'public void com.arterh.esocial.ProcessadorLoteEventos.onMessage(com.arterh.esocial.vo.MensagemLoteEventosS) throws com.arkhi.esocial.exception.XmlEsocialInvalidoException,com.arkhi.esocial.exception.EventoInvalidoException' threw exception; nested exception is com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:98)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:66)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:721)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:681)
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:651)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:315)
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:233)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1164)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1156)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1053)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.arkhi.esocial.exception.EventoInvalidoException: Falha na montagem do evento S.
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:152)
+	at com.arterh.esocial.ProcessadorLoteEventos.processaEventos(ProcessadorLoteEventos.java:108)
+	at com.arterh.esocial.ProcessadorLoteEventos.onMessage(ProcessadorLoteEventos.java:61)
+	at com.arterh.esocial.ProcessadorLoteEventos$$FastClassBySpringCGLIB$$64fb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.arterh.esocial.ProcessadorLoteEventos$$EnhancerBySpringCGLIB$$10bf3ef0.onMessage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:90)
+	... 10 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at sun.security.pkcs12.PKCS12KeyStore.engineLoad(Unknown Source)
+	at java.security.KeyStore.load(Unknown Source)
+	at com.arkhi.esocial.seguranca.SocketFactoryDinamico.<init>(SocketFactoryDinamico.java:63)
+	at com.arterh.esocial.EmissorLoteEventos.montaLoteEventos(EmissorLoteEventos.java:141)
+	... 29 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded
+	... 33 common frames omitted

@@ -1,0 +1,19 @@
+platform:
+  - x64
+
+cache:
+  - node_modules
+  - '%APPDATA%\npm-cache'
+  - '%USERPROFILE%\.electron'
+
+init:
+  - git config --global core.autocrlf input
+
+install:
+  - ps: Install-Product node 8 $env:Platform
+  - npm install
+
+build_script:
+  - npm run dist
+
+test: off

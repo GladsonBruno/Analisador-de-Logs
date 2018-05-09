@@ -1,0 +1,784 @@
+08-02-2018 09:40:00.132 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - Preparando novo lote de eventos para envio para ambiente de: PRE-PRODUCAO
+08-02-2018 09:40:00.172 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Empregador: 51663763
+08-02-2018 09:40:00.172 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Transmissor: 51663763001044
+08-02-2018 09:40:00.173 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	IDs dos eventos do lote: 
+08-02-2018 09:40:00.173 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$3 - 		ID1516637630000002017112414340500001
+08-02-2018 09:40:00.308 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$2 - Atualizando o ID: ID1516637630000002017112414340500001 no banco de dados como extraido para processamento.
+08-02-2018 09:40:00.396 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos -  
+08-02-2018 09:40:00.433 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Iniciando comunicação com ambiente de: PRE-PRODUCAO
+08-02-2018 09:40:00.434 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Realizando o envio de um lote de eventos:
+08-02-2018 09:40:00.434 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Empregador: 51663763
+08-02-2018 09:40:00.435 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Transmissor: 51663763001044
+08-02-2018 09:40:00.435 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Numero de eventos sendo enviados: 1
+08-02-2018 09:40:00.435 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.lambda$processaEventos$0 - 	ID sendo enviado: ID1516637630000002017112414340500001
+08-02-2018 09:40:00.468 [DefaultMessageListenerContainer-1] WARN  o.a.a.deployment.AxisConfigBuilder.processDeployers - Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+08-02-2018 09:40:00.475 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/v1_1_1">
+  <envioLoteEventos grupo="1">
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <ideTransmissor>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763001044</nrInsc>
+    </ideTransmissor>
+    <eventos>
+      <evento Id="ID1516637630000002017112414340500001">
+        <eSocial xmlns="http://www.esocial.gov.br/schema/evt/evtInfoEmpregador/v02_03_00">
+  <evtInfoEmpregador Id="ID1516637630000002017112414340500001">
+    <ideEvento>
+      <tpAmb>2</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>versaoeSocial2.3.0</verProc>
+    </ideEvento>
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <infoEmpregador>
+      <inclusao>
+        <idePeriodo>
+          <iniValid>2017-01</iniValid>
+        </idePeriodo>
+        <infoCadastro>
+          <nmRazao>LOJAS TANGER LTDA</nmRazao>
+          <classTrib>99</classTrib>
+          <natJurid>2062</natJurid>
+          <indCoop>0</indCoop>
+          <indConstr>0</indConstr>
+          <indDesFolha>1</indDesFolha>
+          <indOptRegEletron>1</indOptRegEletron>
+          <indEntEd>N</indEntEd>
+          <indEtt>N</indEtt>
+          <contato>
+            <nmCtt>Rosemeire L Betti Silva</nmCtt>
+            <cpfCtt>07436740814</cpfCtt>
+            <foneFixo>1435334600</foneFixo>
+            <foneCel>14991437386</foneCel>
+            <email>rose@tanger.com.br</email>
+          </contato>
+          <softwareHouse>
+            <cnpjSoftHouse>23246515000171</cnpjSoftHouse>
+            <nmRazao>ARTE INFORMATICA LTDA - FOLHA PAGAMENTO</nmRazao>
+            <nmCont>LUCIANA LEANDRO</nmCont>
+            <telefone>3121298600</telefone>
+            <email>suporte@arteinfo.com.br</email>
+          </softwareHouse>
+          <infoComplementares>
+            <situacaoPJ>
+              <indSitPJ>0</indSitPJ>
+            </situacaoPJ>
+          </infoComplementares>
+        </infoCadastro>
+      </inclusao>
+    </infoEmpregador>
+  </evtInfoEmpregador>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+              <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+              <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+              <Reference URI="">
+                <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <DigestValue>J0pb8XjDgkK7n6ZTYYKYrGCnF+/pAo3gNW98KLXoGyI=</DigestValue>
+              </Reference>
+            </SignedInfo>
+            <SignatureValue>kdbRBC1AQpaB9wN80NUzQ5dx7rxcXvTJH6tD6EHEub3PacvSFsKX258ifDc6zaHVRrwzT7B5TR2j
+wFjEtwi9tG2csHxSEY64m8No5hIBtqrFFtkrGQ9avUX86NzBvcEaeCbFomeAs3O7XQGb0R66tJ6V
+lAJ0OJtqeNnsFf0Bk60gzg3AC5BV9yD+ydHvhBxxhCjAgg6NGrkFEjQ7h/kh6hwmWegjqYyXoR98
+gS7f1kBsuT5LsbhzhgXIiWSYtV8h7FvsfIy0JjhQEKLoF0lQ1wLepOVFdZSPCEcKFImb6YAj1Xrd
+dcXe1eEdipZwr4Km1lfVRbB1s275vv8ygZT1Ug==</SignatureValue>
+            <KeyInfo>
+              <X509Data>
+                <X509Certificate>MIIHqTCCBZGgAwIBAgIIMf8XEQc6Y+4wDQYJKoZIhvcNAQELBQAwgYkxCzAJBgNVBAYTAkJSMRMw
+EQYDVQQKEwpJQ1AtQnJhc2lsMTQwMgYDVQQLEytBdXRvcmlkYWRlIENlcnRpZmljYWRvcmEgUmFp
+eiBCcmFzaWxlaXJhIHYyMRIwEAYDVQQLEwlBQyBTT0xVVEkxGzAZBgNVBAMTEkFDIFNPTFVUSSBN
+dWx0aXBsYTAeFw0xNzExMDgxNTU0MjZaFw0xODExMDcxMjEwMDBaMIHQMQswCQYDVQQGEwJCUjET
+MBEGA1UEChMKSUNQLUJyYXNpbDE0MDIGA1UECxMrQXV0b3JpZGFkZSBDZXJ0aWZpY2Fkb3JhIFJh
+aXogQnJhc2lsZWlyYSB2MjESMBAGA1UECxMJQUMgU09MVVRJMRswGQYDVQQLExJBQyBTT0xVVEkg
+TXVsdGlwbGExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMSkwJwYDVQQDEyBMT0pBUyBUQU5H
+RVIgTFREQTo1MTY2Mzc2MzAwMDE1MzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJfT
+LWDcjara9oAxW6k8rMxPQrZKN7sghXxkLXrQ4yHvK8jSDx0lbS+ECUccV9Dfm0AAC2O3s3jrngAz
+Qs1olBCeETrDZpbcUc5Y1rN+6B5+23orQfYnQ10JywUXAhoW9ZXeUrBAkLMFqJooKPFuhhRDWjGJ
+ZgEd5eXBS5KNSeGxd0jPF03yR0hkN+1uunoH1yIz2LFp7LH2lI33FcaftHSa593diNJZlPdia6TE
+6xxG9s9VtQG830V04vjGd5P9+DN5BJGa7kUunnpk19Qj4NdSFOj66zNaWCmPHqq8uKBlWV534GjB
+yABOPdEP+OUxOQcug8JdDynC6zLK3Lr8zmcCAwEAAaOCAsowggLGMFQGCCsGAQUFBwEBBEgwRjBE
+BggrBgEFBQcwAoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20uYnIvbGNyL2FjLXNvbHV0aS1tdWx0
+aXBsYS12MS5wN2IwHQYDVR0OBBYEFC8QuYmf0sSWPcg7JWKGl8ohqI2WMAkGA1UdEwQCMAAwHwYD
+VR0jBBgwFoAUNa4xFPZe0npPWP40qBpnlwrEmwcwXgYDVR0gBFcwVTBTBgZgTAECASYwSTBHBggr
+BgEFBQcCARY7aHR0cHM6Ly9jY2QuYWNzb2x1dGkuY29tLmJyL2RvY3MvZHBjLWFjLXNvbHV0aS1t
+dWx0aXBsYS5wZGYwgd4GA1UdHwSB1jCB0zA+oDygOoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20u
+YnIvbGNyL2FjLXNvbHV0aS1tdWx0aXBsYS12MS5jcmwwP6A9oDuGOWh0dHA6Ly9jY2QyLmFjc29s
+dXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRpcGxhLXYxLmNybDBQoE6gTIZKaHR0cDovL3Jl
+cG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0FDU09MVVRJL2FjLXNvbHV0aS1tdWx0aXBs
+YS12MS5jcmwwDgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCB
+sgYDVR0RBIGqMIGngRVhbmFjcmlzQHRhbmdlci5jb20uYnKgGwYFYEwBAwKgEhMQRURHQVJEIERP
+TUlOR1VFU6AZBgVgTAEDA6AQEw41MTY2Mzc2MzAwMDE1M6A9BgVgTAEDBKA0EzIwOTAzMTk0MTAy
+Mzg2MjU5ODIwMDAwMDAwMDAwMDAwMDAwMDAwMDMzOTcxNzJTU1BTUKAXBgVgTAEDB6AOEwwwMDAw
+MDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBAIld1B0xSxGuQ/rKE1AzAs4bUXmP5+r07z5DWnGy
+vINfE5aZIhaIwP19dsbQNrPpqAt8Elax+K72sjrKgKLVYW9whlptVwjsFfJcK4el8UXrQUEV9gqe
+dHxYUsTB32Q2d9rbZPmm3dqv2Grx+GDscjOExhEw8xeS1S4Q7zetM6XLMIoy9XKPzMrzsfgMTrpE
+NJPoQdES4orprzZRLsd89mZbhnbOlxUm1tejlMAv5SXkGotq8M/81x9HIy+wVXUzBl5yic44wgMU
+Q9h1yyx2WBaXDprcjrbT8WhrI55c6sZaXezKtPlOwWI9dmqKsWhO1URSR5eDDsbQrbV7meRmylGd
+QAG5E3BYBlBeF72/P80JE46CI5fTGSUFYM62kCePtk3QOjgGNeOqBkilxdXJTUJsEx4vMUNKXKZv
+s0DyuHo+c9ZTaymZVV6Jr1EdMJINSX5Xb/9PwdFumnUoBmlA9yoTuu8XzBrkFQC06gU/7B0+Nuhq
+Iv7GoAV9g2e/nhjZcRs1LTYso1r0AeLNkb3w8+u479oQDYmwfFZRUc+cpU4lrvJBwe0KgOcuqaX4
+vmYlFTUWIdn//HQw2br2Qk2mljNepagU4f5HpYaCN7juhQ1sV5XXKUJji9Qa7d2+h8SKgYUGzIvD
+cgTp6wJVD3NtBnEC1xgQQk6QkK3wsXWfh+hD</X509Certificate>
+              </X509Data>
+            </KeyInfo>
+          </Signature>
+        </eSocial>
+      </evento>
+    </eventos>
+  </envioLoteEventos>
+</eSocial>
+
+08-02-2018 09:40:01.195 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/retornoEnvio/v1_1_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <retornoEnvioLoteEventos>
+    <status>
+      <cdResposta>401</cdResposta>
+      <descResposta>Lote Incorreto - Erro preenchimento.</descResposta>
+      <ocorrencias>
+        <ocorrencia>
+          <codigo>607</codigo>
+          <descricao>O número de inscrição do transmissor deverá ser igual ao CNPJ/CPF do certificado utilizado para o envio do lote.</descricao>
+          <tipo>1</tipo>
+          <localizacao>/eSocial/envioLoteEventos/ideTransmissor/nrInsc</localizacao>
+        </ocorrencia>
+      </ocorrencias>
+    </status>
+  </retornoEnvioLoteEventos>
+</eSocial>
+
+08-02-2018 09:40:01.219 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes -  
+08-02-2018 09:40:01.219 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - Retorno do processamento do lote de eventos.
+08-02-2018 09:40:01.220 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Código de resposta do governo: 401
+08-02-2018 09:40:01.221 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Descrição da resposta: Lote Incorreto - Erro preenchimento.
+08-02-2018 09:45:00.162 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - Preparando novo lote de eventos para envio para ambiente de: PRE-PRODUCAO
+08-02-2018 09:45:00.162 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Empregador: 51663763
+08-02-2018 09:45:00.163 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Transmissor: 51663763001044
+08-02-2018 09:45:00.164 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	IDs dos eventos do lote: 
+08-02-2018 09:45:00.166 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$3 - 		ID1516637630000002018011711412700001
+08-02-2018 09:45:00.277 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos -  
+08-02-2018 09:45:00.278 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Iniciando comunicação com ambiente de: PRE-PRODUCAO
+08-02-2018 09:45:00.278 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Realizando o envio de um lote de eventos:
+08-02-2018 09:45:00.279 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Empregador: 51663763
+08-02-2018 09:45:00.279 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Transmissor: 51663763001044
+08-02-2018 09:45:00.279 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Numero de eventos sendo enviados: 1
+08-02-2018 09:45:00.280 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.lambda$processaEventos$0 - 	ID sendo enviado: ID1516637630000002018011711412700001
+08-02-2018 09:45:00.283 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$2 - Atualizando o ID: ID1516637630000002018011711412700001 no banco de dados como extraido para processamento.
+08-02-2018 09:45:00.296 [DefaultMessageListenerContainer-1] WARN  o.a.a.deployment.AxisConfigBuilder.processDeployers - Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+08-02-2018 09:45:00.307 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/v1_1_1">
+  <envioLoteEventos grupo="1">
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <ideTransmissor>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763001044</nrInsc>
+    </ideTransmissor>
+    <eventos>
+      <evento Id="ID1516637630000002018011711412700001">
+        <eSocial xmlns="http://www.esocial.gov.br/schema/evt/evtTabEstab/v02_04_01">
+  <evtTabEstab Id="ID1516637630000002018011711412700001">
+    <ideEvento>
+      <tpAmb>2</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>versaoeSocial2.4.01</verProc>
+    </ideEvento>
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <infoEstab>
+      <inclusao>
+        <ideEstab>
+          <tpInsc>1</tpInsc>
+          <nrInsc>51663763000234</nrInsc>
+          <iniValid>2016-01</iniValid>
+        </ideEstab>
+        <dadosEstab>
+          <cnaePrep>4781400</cnaePrep>
+          <aliqGilrat>
+            <aliqRat>2</aliqRat>
+            <fap>0.5</fap>
+            <aliqRatAjust>1</aliqRatAjust>
+          </aliqGilrat>
+          <infoTrab>
+            <regPt>1</regPt>
+            <infoApr>
+              <contApr>2</contApr>
+              <contEntEd>N</contEntEd>
+            </infoApr>
+          </infoTrab>
+        </dadosEstab>
+      </inclusao>
+    </infoEstab>
+  </evtTabEstab>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+              <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+              <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+              <Reference URI="">
+                <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <DigestValue>03e9oEJ1cdV+WbPQ3Z1LfXqHU2cv+MTaLqm1w5ejZwk=</DigestValue>
+              </Reference>
+            </SignedInfo>
+            <SignatureValue>JiIpnJofAUcW9K63k3L//G1JwseQGrvAWZ3p/nejYdRmer/EKcM7e7TW93SqdztcRI0QVQ1kxFJQ
+X7yZv4yJkUdPsvNSqiA8KEZ0/jxHHrrD0BNOUQIwwYfDiwZvwh09huc7PQ1HmFMOOjwhLe0yPuDk
+rVQZDaphFX1YsC8eBKyNI9iM6JwCi2k9SsLZ8/LFGRPWj0Wu3965A/UjfgoXLjObRoHz6nrQ0xul
+FSzrQyQVOc1dO7Yu0NF7lvlcSunfpU3kRUSetAr1ecwZFMM5pnniJPdM598+YK849aak+o30k9yJ
+mKL5LWk4lWPljxvV3fJNN6aHrOtWl4Hy+s4jhw==</SignatureValue>
+            <KeyInfo>
+              <X509Data>
+                <X509Certificate>MIIHqTCCBZGgAwIBAgIIMf8XEQc6Y+4wDQYJKoZIhvcNAQELBQAwgYkxCzAJBgNVBAYTAkJSMRMw
+EQYDVQQKEwpJQ1AtQnJhc2lsMTQwMgYDVQQLEytBdXRvcmlkYWRlIENlcnRpZmljYWRvcmEgUmFp
+eiBCcmFzaWxlaXJhIHYyMRIwEAYDVQQLEwlBQyBTT0xVVEkxGzAZBgNVBAMTEkFDIFNPTFVUSSBN
+dWx0aXBsYTAeFw0xNzExMDgxNTU0MjZaFw0xODExMDcxMjEwMDBaMIHQMQswCQYDVQQGEwJCUjET
+MBEGA1UEChMKSUNQLUJyYXNpbDE0MDIGA1UECxMrQXV0b3JpZGFkZSBDZXJ0aWZpY2Fkb3JhIFJh
+aXogQnJhc2lsZWlyYSB2MjESMBAGA1UECxMJQUMgU09MVVRJMRswGQYDVQQLExJBQyBTT0xVVEkg
+TXVsdGlwbGExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMSkwJwYDVQQDEyBMT0pBUyBUQU5H
+RVIgTFREQTo1MTY2Mzc2MzAwMDE1MzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJfT
+LWDcjara9oAxW6k8rMxPQrZKN7sghXxkLXrQ4yHvK8jSDx0lbS+ECUccV9Dfm0AAC2O3s3jrngAz
+Qs1olBCeETrDZpbcUc5Y1rN+6B5+23orQfYnQ10JywUXAhoW9ZXeUrBAkLMFqJooKPFuhhRDWjGJ
+ZgEd5eXBS5KNSeGxd0jPF03yR0hkN+1uunoH1yIz2LFp7LH2lI33FcaftHSa593diNJZlPdia6TE
+6xxG9s9VtQG830V04vjGd5P9+DN5BJGa7kUunnpk19Qj4NdSFOj66zNaWCmPHqq8uKBlWV534GjB
+yABOPdEP+OUxOQcug8JdDynC6zLK3Lr8zmcCAwEAAaOCAsowggLGMFQGCCsGAQUFBwEBBEgwRjBE
+BggrBgEFBQcwAoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20uYnIvbGNyL2FjLXNvbHV0aS1tdWx0
+aXBsYS12MS5wN2IwHQYDVR0OBBYEFC8QuYmf0sSWPcg7JWKGl8ohqI2WMAkGA1UdEwQCMAAwHwYD
+VR0jBBgwFoAUNa4xFPZe0npPWP40qBpnlwrEmwcwXgYDVR0gBFcwVTBTBgZgTAECASYwSTBHBggr
+BgEFBQcCARY7aHR0cHM6Ly9jY2QuYWNzb2x1dGkuY29tLmJyL2RvY3MvZHBjLWFjLXNvbHV0aS1t
+dWx0aXBsYS5wZGYwgd4GA1UdHwSB1jCB0zA+oDygOoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20u
+YnIvbGNyL2FjLXNvbHV0aS1tdWx0aXBsYS12MS5jcmwwP6A9oDuGOWh0dHA6Ly9jY2QyLmFjc29s
+dXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRpcGxhLXYxLmNybDBQoE6gTIZKaHR0cDovL3Jl
+cG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0FDU09MVVRJL2FjLXNvbHV0aS1tdWx0aXBs
+YS12MS5jcmwwDgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCB
+sgYDVR0RBIGqMIGngRVhbmFjcmlzQHRhbmdlci5jb20uYnKgGwYFYEwBAwKgEhMQRURHQVJEIERP
+TUlOR1VFU6AZBgVgTAEDA6AQEw41MTY2Mzc2MzAwMDE1M6A9BgVgTAEDBKA0EzIwOTAzMTk0MTAy
+Mzg2MjU5ODIwMDAwMDAwMDAwMDAwMDAwMDAwMDMzOTcxNzJTU1BTUKAXBgVgTAEDB6AOEwwwMDAw
+MDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBAIld1B0xSxGuQ/rKE1AzAs4bUXmP5+r07z5DWnGy
+vINfE5aZIhaIwP19dsbQNrPpqAt8Elax+K72sjrKgKLVYW9whlptVwjsFfJcK4el8UXrQUEV9gqe
+dHxYUsTB32Q2d9rbZPmm3dqv2Grx+GDscjOExhEw8xeS1S4Q7zetM6XLMIoy9XKPzMrzsfgMTrpE
+NJPoQdES4orprzZRLsd89mZbhnbOlxUm1tejlMAv5SXkGotq8M/81x9HIy+wVXUzBl5yic44wgMU
+Q9h1yyx2WBaXDprcjrbT8WhrI55c6sZaXezKtPlOwWI9dmqKsWhO1URSR5eDDsbQrbV7meRmylGd
+QAG5E3BYBlBeF72/P80JE46CI5fTGSUFYM62kCePtk3QOjgGNeOqBkilxdXJTUJsEx4vMUNKXKZv
+s0DyuHo+c9ZTaymZVV6Jr1EdMJINSX5Xb/9PwdFumnUoBmlA9yoTuu8XzBrkFQC06gU/7B0+Nuhq
+Iv7GoAV9g2e/nhjZcRs1LTYso1r0AeLNkb3w8+u479oQDYmwfFZRUc+cpU4lrvJBwe0KgOcuqaX4
+vmYlFTUWIdn//HQw2br2Qk2mljNepagU4f5HpYaCN7juhQ1sV5XXKUJji9Qa7d2+h8SKgYUGzIvD
+cgTp6wJVD3NtBnEC1xgQQk6QkK3wsXWfh+hD</X509Certificate>
+              </X509Data>
+            </KeyInfo>
+          </Signature>
+        </eSocial>
+      </evento>
+    </eventos>
+  </envioLoteEventos>
+</eSocial>
+
+08-02-2018 09:45:00.793 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/retornoEnvio/v1_1_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <retornoEnvioLoteEventos>
+    <status>
+      <cdResposta>401</cdResposta>
+      <descResposta>Lote Incorreto - Erro preenchimento.</descResposta>
+      <ocorrencias>
+        <ocorrencia>
+          <codigo>607</codigo>
+          <descricao>O número de inscrição do transmissor deverá ser igual ao CNPJ/CPF do certificado utilizado para o envio do lote.</descricao>
+          <tipo>1</tipo>
+          <localizacao>/eSocial/envioLoteEventos/ideTransmissor/nrInsc</localizacao>
+        </ocorrencia>
+      </ocorrencias>
+    </status>
+  </retornoEnvioLoteEventos>
+</eSocial>
+
+08-02-2018 09:45:00.797 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes -  
+08-02-2018 09:45:00.797 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - Retorno do processamento do lote de eventos.
+08-02-2018 09:45:00.797 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Código de resposta do governo: 401
+08-02-2018 09:45:00.798 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Descrição da resposta: Lote Incorreto - Erro preenchimento.
+08-02-2018 09:52:30.055 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - Preparando novo lote de eventos para envio para ambiente de: PRE-PRODUCAO
+08-02-2018 09:52:30.056 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Empregador: 51663763
+08-02-2018 09:52:30.060 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Transmissor: 51663763001044
+08-02-2018 09:52:30.061 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	IDs dos eventos do lote: 
+08-02-2018 09:52:30.062 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$3 - 		ID1516637630000002018011711412700001
+08-02-2018 09:52:30.157 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$2 - Atualizando o ID: ID1516637630000002018011711412700001 no banco de dados como extraido para processamento.
+08-02-2018 09:52:30.192 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos -  
+08-02-2018 09:52:30.198 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Iniciando comunicação com ambiente de: PRE-PRODUCAO
+08-02-2018 09:52:30.199 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Realizando o envio de um lote de eventos:
+08-02-2018 09:52:30.199 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Empregador: 51663763
+08-02-2018 09:52:30.200 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Transmissor: 51663763001044
+08-02-2018 09:52:30.200 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Numero de eventos sendo enviados: 1
+08-02-2018 09:52:30.204 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.lambda$processaEventos$0 - 	ID sendo enviado: ID1516637630000002018011711412700001
+08-02-2018 09:52:30.244 [DefaultMessageListenerContainer-1] WARN  o.a.a.deployment.AxisConfigBuilder.processDeployers - Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+08-02-2018 09:52:30.254 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/v1_1_1">
+  <envioLoteEventos grupo="1">
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <ideTransmissor>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763001044</nrInsc>
+    </ideTransmissor>
+    <eventos>
+      <evento Id="ID1516637630000002018011711412700001">
+        <eSocial xmlns="http://www.esocial.gov.br/schema/evt/evtTabEstab/v02_04_01">
+  <evtTabEstab Id="ID1516637630000002018011711412700001">
+    <ideEvento>
+      <tpAmb>2</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>versaoeSocial2.4.01</verProc>
+    </ideEvento>
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <infoEstab>
+      <inclusao>
+        <ideEstab>
+          <tpInsc>1</tpInsc>
+          <nrInsc>51663763000234</nrInsc>
+          <iniValid>2016-01</iniValid>
+        </ideEstab>
+        <dadosEstab>
+          <cnaePrep>4781400</cnaePrep>
+          <aliqGilrat>
+            <aliqRat>2</aliqRat>
+            <fap>0.5</fap>
+            <aliqRatAjust>1</aliqRatAjust>
+          </aliqGilrat>
+          <infoTrab>
+            <regPt>1</regPt>
+            <infoApr>
+              <contApr>2</contApr>
+              <contEntEd>N</contEntEd>
+            </infoApr>
+          </infoTrab>
+        </dadosEstab>
+      </inclusao>
+    </infoEstab>
+  </evtTabEstab>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+              <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+              <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+              <Reference URI="">
+                <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <DigestValue>03e9oEJ1cdV+WbPQ3Z1LfXqHU2cv+MTaLqm1w5ejZwk=</DigestValue>
+              </Reference>
+            </SignedInfo>
+            <SignatureValue>JiIpnJofAUcW9K63k3L//G1JwseQGrvAWZ3p/nejYdRmer/EKcM7e7TW93SqdztcRI0QVQ1kxFJQ
+X7yZv4yJkUdPsvNSqiA8KEZ0/jxHHrrD0BNOUQIwwYfDiwZvwh09huc7PQ1HmFMOOjwhLe0yPuDk
+rVQZDaphFX1YsC8eBKyNI9iM6JwCi2k9SsLZ8/LFGRPWj0Wu3965A/UjfgoXLjObRoHz6nrQ0xul
+FSzrQyQVOc1dO7Yu0NF7lvlcSunfpU3kRUSetAr1ecwZFMM5pnniJPdM598+YK849aak+o30k9yJ
+mKL5LWk4lWPljxvV3fJNN6aHrOtWl4Hy+s4jhw==</SignatureValue>
+            <KeyInfo>
+              <X509Data>
+                <X509Certificate>MIIHqTCCBZGgAwIBAgIIMf8XEQc6Y+4wDQYJKoZIhvcNAQELBQAwgYkxCzAJBgNVBAYTAkJSMRMw
+EQYDVQQKEwpJQ1AtQnJhc2lsMTQwMgYDVQQLEytBdXRvcmlkYWRlIENlcnRpZmljYWRvcmEgUmFp
+eiBCcmFzaWxlaXJhIHYyMRIwEAYDVQQLEwlBQyBTT0xVVEkxGzAZBgNVBAMTEkFDIFNPTFVUSSBN
+dWx0aXBsYTAeFw0xNzExMDgxNTU0MjZaFw0xODExMDcxMjEwMDBaMIHQMQswCQYDVQQGEwJCUjET
+MBEGA1UEChMKSUNQLUJyYXNpbDE0MDIGA1UECxMrQXV0b3JpZGFkZSBDZXJ0aWZpY2Fkb3JhIFJh
+aXogQnJhc2lsZWlyYSB2MjESMBAGA1UECxMJQUMgU09MVVRJMRswGQYDVQQLExJBQyBTT0xVVEkg
+TXVsdGlwbGExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMSkwJwYDVQQDEyBMT0pBUyBUQU5H
+RVIgTFREQTo1MTY2Mzc2MzAwMDE1MzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJfT
+LWDcjara9oAxW6k8rMxPQrZKN7sghXxkLXrQ4yHvK8jSDx0lbS+ECUccV9Dfm0AAC2O3s3jrngAz
+Qs1olBCeETrDZpbcUc5Y1rN+6B5+23orQfYnQ10JywUXAhoW9ZXeUrBAkLMFqJooKPFuhhRDWjGJ
+ZgEd5eXBS5KNSeGxd0jPF03yR0hkN+1uunoH1yIz2LFp7LH2lI33FcaftHSa593diNJZlPdia6TE
+6xxG9s9VtQG830V04vjGd5P9+DN5BJGa7kUunnpk19Qj4NdSFOj66zNaWCmPHqq8uKBlWV534GjB
+yABOPdEP+OUxOQcug8JdDynC6zLK3Lr8zmcCAwEAAaOCAsowggLGMFQGCCsGAQUFBwEBBEgwRjBE
+BggrBgEFBQcwAoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20uYnIvbGNyL2FjLXNvbHV0aS1tdWx0
+aXBsYS12MS5wN2IwHQYDVR0OBBYEFC8QuYmf0sSWPcg7JWKGl8ohqI2WMAkGA1UdEwQCMAAwHwYD
+VR0jBBgwFoAUNa4xFPZe0npPWP40qBpnlwrEmwcwXgYDVR0gBFcwVTBTBgZgTAECASYwSTBHBggr
+BgEFBQcCARY7aHR0cHM6Ly9jY2QuYWNzb2x1dGkuY29tLmJyL2RvY3MvZHBjLWFjLXNvbHV0aS1t
+dWx0aXBsYS5wZGYwgd4GA1UdHwSB1jCB0zA+oDygOoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20u
+YnIvbGNyL2FjLXNvbHV0aS1tdWx0aXBsYS12MS5jcmwwP6A9oDuGOWh0dHA6Ly9jY2QyLmFjc29s
+dXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRpcGxhLXYxLmNybDBQoE6gTIZKaHR0cDovL3Jl
+cG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0FDU09MVVRJL2FjLXNvbHV0aS1tdWx0aXBs
+YS12MS5jcmwwDgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCB
+sgYDVR0RBIGqMIGngRVhbmFjcmlzQHRhbmdlci5jb20uYnKgGwYFYEwBAwKgEhMQRURHQVJEIERP
+TUlOR1VFU6AZBgVgTAEDA6AQEw41MTY2Mzc2MzAwMDE1M6A9BgVgTAEDBKA0EzIwOTAzMTk0MTAy
+Mzg2MjU5ODIwMDAwMDAwMDAwMDAwMDAwMDAwMDMzOTcxNzJTU1BTUKAXBgVgTAEDB6AOEwwwMDAw
+MDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBAIld1B0xSxGuQ/rKE1AzAs4bUXmP5+r07z5DWnGy
+vINfE5aZIhaIwP19dsbQNrPpqAt8Elax+K72sjrKgKLVYW9whlptVwjsFfJcK4el8UXrQUEV9gqe
+dHxYUsTB32Q2d9rbZPmm3dqv2Grx+GDscjOExhEw8xeS1S4Q7zetM6XLMIoy9XKPzMrzsfgMTrpE
+NJPoQdES4orprzZRLsd89mZbhnbOlxUm1tejlMAv5SXkGotq8M/81x9HIy+wVXUzBl5yic44wgMU
+Q9h1yyx2WBaXDprcjrbT8WhrI55c6sZaXezKtPlOwWI9dmqKsWhO1URSR5eDDsbQrbV7meRmylGd
+QAG5E3BYBlBeF72/P80JE46CI5fTGSUFYM62kCePtk3QOjgGNeOqBkilxdXJTUJsEx4vMUNKXKZv
+s0DyuHo+c9ZTaymZVV6Jr1EdMJINSX5Xb/9PwdFumnUoBmlA9yoTuu8XzBrkFQC06gU/7B0+Nuhq
+Iv7GoAV9g2e/nhjZcRs1LTYso1r0AeLNkb3w8+u479oQDYmwfFZRUc+cpU4lrvJBwe0KgOcuqaX4
+vmYlFTUWIdn//HQw2br2Qk2mljNepagU4f5HpYaCN7juhQ1sV5XXKUJji9Qa7d2+h8SKgYUGzIvD
+cgTp6wJVD3NtBnEC1xgQQk6QkK3wsXWfh+hD</X509Certificate>
+              </X509Data>
+            </KeyInfo>
+          </Signature>
+        </eSocial>
+      </evento>
+    </eventos>
+  </envioLoteEventos>
+</eSocial>
+
+08-02-2018 09:52:30.680 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/retornoEnvio/v1_1_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <retornoEnvioLoteEventos>
+    <status>
+      <cdResposta>401</cdResposta>
+      <descResposta>Lote Incorreto - Erro preenchimento.</descResposta>
+      <ocorrencias>
+        <ocorrencia>
+          <codigo>607</codigo>
+          <descricao>O número de inscrição do transmissor deverá ser igual ao CNPJ/CPF do certificado utilizado para o envio do lote.</descricao>
+          <tipo>1</tipo>
+          <localizacao>/eSocial/envioLoteEventos/ideTransmissor/nrInsc</localizacao>
+        </ocorrencia>
+      </ocorrencias>
+    </status>
+  </retornoEnvioLoteEventos>
+</eSocial>
+
+08-02-2018 09:52:30.684 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes -  
+08-02-2018 09:52:30.686 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - Retorno do processamento do lote de eventos.
+08-02-2018 09:52:30.686 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Código de resposta do governo: 401
+08-02-2018 09:52:30.687 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Descrição da resposta: Lote Incorreto - Erro preenchimento.
+08-02-2018 09:54:30.040 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - Preparando novo lote de eventos para envio para ambiente de: PRE-PRODUCAO
+08-02-2018 09:54:30.041 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Empregador: 51663763
+08-02-2018 09:54:30.042 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Transmissor: 51663763001044
+08-02-2018 09:54:30.042 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	IDs dos eventos do lote: 
+08-02-2018 09:54:30.042 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$3 - 		ID1516637630000002017112414340500001
+08-02-2018 09:54:30.139 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$2 - Atualizando o ID: ID1516637630000002017112414340500001 no banco de dados como extraido para processamento.
+08-02-2018 09:54:30.160 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos -  
+08-02-2018 09:54:30.161 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Iniciando comunicação com ambiente de: PRE-PRODUCAO
+08-02-2018 09:54:30.161 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Realizando o envio de um lote de eventos:
+08-02-2018 09:54:30.162 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Empregador: 51663763
+08-02-2018 09:54:30.162 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Transmissor: 51663763001044
+08-02-2018 09:54:30.162 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Numero de eventos sendo enviados: 1
+08-02-2018 09:54:30.163 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.lambda$processaEventos$0 - 	ID sendo enviado: ID1516637630000002017112414340500001
+08-02-2018 09:54:30.180 [DefaultMessageListenerContainer-1] WARN  o.a.a.deployment.AxisConfigBuilder.processDeployers - Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+08-02-2018 09:54:30.186 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/v1_1_1">
+  <envioLoteEventos grupo="1">
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <ideTransmissor>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763001044</nrInsc>
+    </ideTransmissor>
+    <eventos>
+      <evento Id="ID1516637630000002017112414340500001">
+        <eSocial xmlns="http://www.esocial.gov.br/schema/evt/evtInfoEmpregador/v02_03_00">
+  <evtInfoEmpregador Id="ID1516637630000002017112414340500001">
+    <ideEvento>
+      <tpAmb>2</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>versaoeSocial2.3.0</verProc>
+    </ideEvento>
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <infoEmpregador>
+      <inclusao>
+        <idePeriodo>
+          <iniValid>2017-01</iniValid>
+        </idePeriodo>
+        <infoCadastro>
+          <nmRazao>LOJAS TANGER LTDA</nmRazao>
+          <classTrib>99</classTrib>
+          <natJurid>2062</natJurid>
+          <indCoop>0</indCoop>
+          <indConstr>0</indConstr>
+          <indDesFolha>1</indDesFolha>
+          <indOptRegEletron>1</indOptRegEletron>
+          <indEntEd>N</indEntEd>
+          <indEtt>N</indEtt>
+          <contato>
+            <nmCtt>Rosemeire L Betti Silva</nmCtt>
+            <cpfCtt>07436740814</cpfCtt>
+            <foneFixo>1435334600</foneFixo>
+            <foneCel>14991437386</foneCel>
+            <email>rose@tanger.com.br</email>
+          </contato>
+          <softwareHouse>
+            <cnpjSoftHouse>23246515000171</cnpjSoftHouse>
+            <nmRazao>ARTE INFORMATICA LTDA - FOLHA PAGAMENTO</nmRazao>
+            <nmCont>LUCIANA LEANDRO</nmCont>
+            <telefone>3121298600</telefone>
+            <email>suporte@arteinfo.com.br</email>
+          </softwareHouse>
+          <infoComplementares>
+            <situacaoPJ>
+              <indSitPJ>0</indSitPJ>
+            </situacaoPJ>
+          </infoComplementares>
+        </infoCadastro>
+      </inclusao>
+    </infoEmpregador>
+  </evtInfoEmpregador>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+              <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+              <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+              <Reference URI="">
+                <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <DigestValue>J0pb8XjDgkK7n6ZTYYKYrGCnF+/pAo3gNW98KLXoGyI=</DigestValue>
+              </Reference>
+            </SignedInfo>
+            <SignatureValue>kdbRBC1AQpaB9wN80NUzQ5dx7rxcXvTJH6tD6EHEub3PacvSFsKX258ifDc6zaHVRrwzT7B5TR2j
+wFjEtwi9tG2csHxSEY64m8No5hIBtqrFFtkrGQ9avUX86NzBvcEaeCbFomeAs3O7XQGb0R66tJ6V
+lAJ0OJtqeNnsFf0Bk60gzg3AC5BV9yD+ydHvhBxxhCjAgg6NGrkFEjQ7h/kh6hwmWegjqYyXoR98
+gS7f1kBsuT5LsbhzhgXIiWSYtV8h7FvsfIy0JjhQEKLoF0lQ1wLepOVFdZSPCEcKFImb6YAj1Xrd
+dcXe1eEdipZwr4Km1lfVRbB1s275vv8ygZT1Ug==</SignatureValue>
+            <KeyInfo>
+              <X509Data>
+                <X509Certificate>MIIHqTCCBZGgAwIBAgIIMf8XEQc6Y+4wDQYJKoZIhvcNAQELBQAwgYkxCzAJBgNVBAYTAkJSMRMw
+EQYDVQQKEwpJQ1AtQnJhc2lsMTQwMgYDVQQLEytBdXRvcmlkYWRlIENlcnRpZmljYWRvcmEgUmFp
+eiBCcmFzaWxlaXJhIHYyMRIwEAYDVQQLEwlBQyBTT0xVVEkxGzAZBgNVBAMTEkFDIFNPTFVUSSBN
+dWx0aXBsYTAeFw0xNzExMDgxNTU0MjZaFw0xODExMDcxMjEwMDBaMIHQMQswCQYDVQQGEwJCUjET
+MBEGA1UEChMKSUNQLUJyYXNpbDE0MDIGA1UECxMrQXV0b3JpZGFkZSBDZXJ0aWZpY2Fkb3JhIFJh
+aXogQnJhc2lsZWlyYSB2MjESMBAGA1UECxMJQUMgU09MVVRJMRswGQYDVQQLExJBQyBTT0xVVEkg
+TXVsdGlwbGExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMSkwJwYDVQQDEyBMT0pBUyBUQU5H
+RVIgTFREQTo1MTY2Mzc2MzAwMDE1MzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJfT
+LWDcjara9oAxW6k8rMxPQrZKN7sghXxkLXrQ4yHvK8jSDx0lbS+ECUccV9Dfm0AAC2O3s3jrngAz
+Qs1olBCeETrDZpbcUc5Y1rN+6B5+23orQfYnQ10JywUXAhoW9ZXeUrBAkLMFqJooKPFuhhRDWjGJ
+ZgEd5eXBS5KNSeGxd0jPF03yR0hkN+1uunoH1yIz2LFp7LH2lI33FcaftHSa593diNJZlPdia6TE
+6xxG9s9VtQG830V04vjGd5P9+DN5BJGa7kUunnpk19Qj4NdSFOj66zNaWCmPHqq8uKBlWV534GjB
+yABOPdEP+OUxOQcug8JdDynC6zLK3Lr8zmcCAwEAAaOCAsowggLGMFQGCCsGAQUFBwEBBEgwRjBE
+BggrBgEFBQcwAoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20uYnIvbGNyL2FjLXNvbHV0aS1tdWx0
+aXBsYS12MS5wN2IwHQYDVR0OBBYEFC8QuYmf0sSWPcg7JWKGl8ohqI2WMAkGA1UdEwQCMAAwHwYD
+VR0jBBgwFoAUNa4xFPZe0npPWP40qBpnlwrEmwcwXgYDVR0gBFcwVTBTBgZgTAECASYwSTBHBggr
+BgEFBQcCARY7aHR0cHM6Ly9jY2QuYWNzb2x1dGkuY29tLmJyL2RvY3MvZHBjLWFjLXNvbHV0aS1t
+dWx0aXBsYS5wZGYwgd4GA1UdHwSB1jCB0zA+oDygOoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20u
+YnIvbGNyL2FjLXNvbHV0aS1tdWx0aXBsYS12MS5jcmwwP6A9oDuGOWh0dHA6Ly9jY2QyLmFjc29s
+dXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRpcGxhLXYxLmNybDBQoE6gTIZKaHR0cDovL3Jl
+cG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0FDU09MVVRJL2FjLXNvbHV0aS1tdWx0aXBs
+YS12MS5jcmwwDgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCB
+sgYDVR0RBIGqMIGngRVhbmFjcmlzQHRhbmdlci5jb20uYnKgGwYFYEwBAwKgEhMQRURHQVJEIERP
+TUlOR1VFU6AZBgVgTAEDA6AQEw41MTY2Mzc2MzAwMDE1M6A9BgVgTAEDBKA0EzIwOTAzMTk0MTAy
+Mzg2MjU5ODIwMDAwMDAwMDAwMDAwMDAwMDAwMDMzOTcxNzJTU1BTUKAXBgVgTAEDB6AOEwwwMDAw
+MDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBAIld1B0xSxGuQ/rKE1AzAs4bUXmP5+r07z5DWnGy
+vINfE5aZIhaIwP19dsbQNrPpqAt8Elax+K72sjrKgKLVYW9whlptVwjsFfJcK4el8UXrQUEV9gqe
+dHxYUsTB32Q2d9rbZPmm3dqv2Grx+GDscjOExhEw8xeS1S4Q7zetM6XLMIoy9XKPzMrzsfgMTrpE
+NJPoQdES4orprzZRLsd89mZbhnbOlxUm1tejlMAv5SXkGotq8M/81x9HIy+wVXUzBl5yic44wgMU
+Q9h1yyx2WBaXDprcjrbT8WhrI55c6sZaXezKtPlOwWI9dmqKsWhO1URSR5eDDsbQrbV7meRmylGd
+QAG5E3BYBlBeF72/P80JE46CI5fTGSUFYM62kCePtk3QOjgGNeOqBkilxdXJTUJsEx4vMUNKXKZv
+s0DyuHo+c9ZTaymZVV6Jr1EdMJINSX5Xb/9PwdFumnUoBmlA9yoTuu8XzBrkFQC06gU/7B0+Nuhq
+Iv7GoAV9g2e/nhjZcRs1LTYso1r0AeLNkb3w8+u479oQDYmwfFZRUc+cpU4lrvJBwe0KgOcuqaX4
+vmYlFTUWIdn//HQw2br2Qk2mljNepagU4f5HpYaCN7juhQ1sV5XXKUJji9Qa7d2+h8SKgYUGzIvD
+cgTp6wJVD3NtBnEC1xgQQk6QkK3wsXWfh+hD</X509Certificate>
+              </X509Data>
+            </KeyInfo>
+          </Signature>
+        </eSocial>
+      </evento>
+    </eventos>
+  </envioLoteEventos>
+</eSocial>
+
+08-02-2018 09:54:30.687 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/retornoEnvio/v1_1_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <retornoEnvioLoteEventos>
+    <status>
+      <cdResposta>401</cdResposta>
+      <descResposta>Lote Incorreto - Erro preenchimento.</descResposta>
+      <ocorrencias>
+        <ocorrencia>
+          <codigo>607</codigo>
+          <descricao>O número de inscrição do transmissor deverá ser igual ao CNPJ/CPF do certificado utilizado para o envio do lote.</descricao>
+          <tipo>1</tipo>
+          <localizacao>/eSocial/envioLoteEventos/ideTransmissor/nrInsc</localizacao>
+        </ocorrencia>
+      </ocorrencias>
+    </status>
+  </retornoEnvioLoteEventos>
+</eSocial>
+
+08-02-2018 09:54:30.693 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes -  
+08-02-2018 09:54:30.694 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - Retorno do processamento do lote de eventos.
+08-02-2018 09:54:30.694 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Código de resposta do governo: 401
+08-02-2018 09:54:30.694 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Descrição da resposta: Lote Incorreto - Erro preenchimento.
+08-02-2018 09:56:00.170 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - Preparando novo lote de eventos para envio para ambiente de: PRE-PRODUCAO
+08-02-2018 09:56:00.178 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Empregador: 51663763
+08-02-2018 09:56:00.178 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	Transmissor: 51663763001044
+08-02-2018 09:56:00.179 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.enviaLoteDeMensagensPorAmbiente - 	IDs dos eventos do lote: 
+08-02-2018 09:56:00.179 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$3 - 		ID1516637630000002017122013494700001
+08-02-2018 09:56:00.292 [pool-1-thread-1] INFO  c.arterh.esocial.ExtratorLoteEventos.lambda$2 - Atualizando o ID: ID1516637630000002017122013494700001 no banco de dados como extraido para processamento.
+08-02-2018 09:56:00.320 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos -  
+08-02-2018 09:56:00.321 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Iniciando comunicação com ambiente de: PRE-PRODUCAO
+08-02-2018 09:56:00.321 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - Realizando o envio de um lote de eventos:
+08-02-2018 09:56:00.328 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Empregador: 51663763
+08-02-2018 09:56:00.328 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Transmissor: 51663763001044
+08-02-2018 09:56:00.328 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.processaEventos - 	Numero de eventos sendo enviados: 1
+08-02-2018 09:56:00.329 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.EmissorLoteEventos.lambda$processaEventos$0 - 	ID sendo enviado: ID1516637630000002017122013494700001
+08-02-2018 09:56:00.367 [DefaultMessageListenerContainer-1] WARN  o.a.a.deployment.AxisConfigBuilder.processDeployers - Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+08-02-2018 09:56:00.386 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/v1_1_1">
+  <envioLoteEventos grupo="1">
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <ideTransmissor>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763001044</nrInsc>
+    </ideTransmissor>
+    <eventos>
+      <evento Id="ID1516637630000002017122013494700001">
+        <eSocial xmlns="http://www.esocial.gov.br/schema/evt/evtInfoEmpregador/v02_04_01">
+  <evtInfoEmpregador Id="ID1516637630000002017122013494700001">
+    <ideEvento>
+      <tpAmb>2</tpAmb>
+      <procEmi>1</procEmi>
+      <verProc>versaoeSocial2.4.01</verProc>
+    </ideEvento>
+    <ideEmpregador>
+      <tpInsc>1</tpInsc>
+      <nrInsc>51663763</nrInsc>
+    </ideEmpregador>
+    <infoEmpregador>
+      <inclusao>
+        <idePeriodo>
+          <iniValid>2016-01</iniValid>
+        </idePeriodo>
+        <infoCadastro>
+          <nmRazao>LOJAS TANGER LTDA</nmRazao>
+          <classTrib>99</classTrib>
+          <natJurid>2062</natJurid>
+          <indCoop>0</indCoop>
+          <indConstr>0</indConstr>
+          <indDesFolha>1</indDesFolha>
+          <indOptRegEletron>1</indOptRegEletron>
+          <indEntEd>N</indEntEd>
+          <indEtt>N</indEtt>
+          <contato>
+            <nmCtt>Rosemeire L Betti Silva</nmCtt>
+            <cpfCtt>07436740814</cpfCtt>
+            <foneFixo>1435334600</foneFixo>
+            <foneCel>14991437386</foneCel>
+            <email>rose@tanger.com.br</email>
+          </contato>
+          <softwareHouse>
+            <cnpjSoftHouse>23246515000171</cnpjSoftHouse>
+            <nmRazao>ARTE INFORMATICA LTDA - FOLHA PAGAMENTO</nmRazao>
+            <nmCont>LUCIANA LEANDRO</nmCont>
+            <telefone>3121298600</telefone>
+            <email>suporte@arteinfo.com.br</email>
+          </softwareHouse>
+          <infoComplementares>
+            <situacaoPJ>
+              <indSitPJ>0</indSitPJ>
+            </situacaoPJ>
+          </infoComplementares>
+        </infoCadastro>
+      </inclusao>
+    </infoEmpregador>
+  </evtInfoEmpregador>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+              <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+              <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+              <Reference URI="">
+                <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <DigestValue>8LN3xn/Wt1nWy4ffmPbNPZ6tofzQOXetr8BxAtNUwcc=</DigestValue>
+              </Reference>
+            </SignedInfo>
+            <SignatureValue>QcRVuj0qBdpeTqhxlFdq6Jv+7aoohcBd0dWVOrLGzMz6tquUCD9psVPGdA3SFZPCJxFOiLh9jXfK
+o5OeBRe35whJsBiQYCCAAxqQJBUr3CHLaPVE3cViM7wou2P9BYBqimL8mK83UwKvPUzaZpObnLE1
+UcqDsnPyQc44dJJmdsmGfiR9o/XbMzgow0nvF/ELFY3E2PhwfvNmFDSdUiwHugdVRzt1KhXt7ELb
+TOhqJ7fWkUv4c8+QcHZAuUYSkmrAUxyUOhQ0zlKwDYiO075M3xdAqF5Q57pN9rKaAmWo+I1u6Yot
+QLgsu+7bInx97M7ew74R+hWSE50y2mOWCpgBxw==</SignatureValue>
+            <KeyInfo>
+              <X509Data>
+                <X509Certificate>MIIHqTCCBZGgAwIBAgIIMf8XEQc6Y+4wDQYJKoZIhvcNAQELBQAwgYkxCzAJBgNVBAYTAkJSMRMw
+EQYDVQQKEwpJQ1AtQnJhc2lsMTQwMgYDVQQLEytBdXRvcmlkYWRlIENlcnRpZmljYWRvcmEgUmFp
+eiBCcmFzaWxlaXJhIHYyMRIwEAYDVQQLEwlBQyBTT0xVVEkxGzAZBgNVBAMTEkFDIFNPTFVUSSBN
+dWx0aXBsYTAeFw0xNzExMDgxNTU0MjZaFw0xODExMDcxMjEwMDBaMIHQMQswCQYDVQQGEwJCUjET
+MBEGA1UEChMKSUNQLUJyYXNpbDE0MDIGA1UECxMrQXV0b3JpZGFkZSBDZXJ0aWZpY2Fkb3JhIFJh
+aXogQnJhc2lsZWlyYSB2MjESMBAGA1UECxMJQUMgU09MVVRJMRswGQYDVQQLExJBQyBTT0xVVEkg
+TXVsdGlwbGExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMSkwJwYDVQQDEyBMT0pBUyBUQU5H
+RVIgTFREQTo1MTY2Mzc2MzAwMDE1MzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJfT
+LWDcjara9oAxW6k8rMxPQrZKN7sghXxkLXrQ4yHvK8jSDx0lbS+ECUccV9Dfm0AAC2O3s3jrngAz
+Qs1olBCeETrDZpbcUc5Y1rN+6B5+23orQfYnQ10JywUXAhoW9ZXeUrBAkLMFqJooKPFuhhRDWjGJ
+ZgEd5eXBS5KNSeGxd0jPF03yR0hkN+1uunoH1yIz2LFp7LH2lI33FcaftHSa593diNJZlPdia6TE
+6xxG9s9VtQG830V04vjGd5P9+DN5BJGa7kUunnpk19Qj4NdSFOj66zNaWCmPHqq8uKBlWV534GjB
+yABOPdEP+OUxOQcug8JdDynC6zLK3Lr8zmcCAwEAAaOCAsowggLGMFQGCCsGAQUFBwEBBEgwRjBE
+BggrBgEFBQcwAoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20uYnIvbGNyL2FjLXNvbHV0aS1tdWx0
+aXBsYS12MS5wN2IwHQYDVR0OBBYEFC8QuYmf0sSWPcg7JWKGl8ohqI2WMAkGA1UdEwQCMAAwHwYD
+VR0jBBgwFoAUNa4xFPZe0npPWP40qBpnlwrEmwcwXgYDVR0gBFcwVTBTBgZgTAECASYwSTBHBggr
+BgEFBQcCARY7aHR0cHM6Ly9jY2QuYWNzb2x1dGkuY29tLmJyL2RvY3MvZHBjLWFjLXNvbHV0aS1t
+dWx0aXBsYS5wZGYwgd4GA1UdHwSB1jCB0zA+oDygOoY4aHR0cDovL2NjZC5hY3NvbHV0aS5jb20u
+YnIvbGNyL2FjLXNvbHV0aS1tdWx0aXBsYS12MS5jcmwwP6A9oDuGOWh0dHA6Ly9jY2QyLmFjc29s
+dXRpLmNvbS5ici9sY3IvYWMtc29sdXRpLW11bHRpcGxhLXYxLmNybDBQoE6gTIZKaHR0cDovL3Jl
+cG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0FDU09MVVRJL2FjLXNvbHV0aS1tdWx0aXBs
+YS12MS5jcmwwDgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCB
+sgYDVR0RBIGqMIGngRVhbmFjcmlzQHRhbmdlci5jb20uYnKgGwYFYEwBAwKgEhMQRURHQVJEIERP
+TUlOR1VFU6AZBgVgTAEDA6AQEw41MTY2Mzc2MzAwMDE1M6A9BgVgTAEDBKA0EzIwOTAzMTk0MTAy
+Mzg2MjU5ODIwMDAwMDAwMDAwMDAwMDAwMDAwMDMzOTcxNzJTU1BTUKAXBgVgTAEDB6AOEwwwMDAw
+MDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBAIld1B0xSxGuQ/rKE1AzAs4bUXmP5+r07z5DWnGy
+vINfE5aZIhaIwP19dsbQNrPpqAt8Elax+K72sjrKgKLVYW9whlptVwjsFfJcK4el8UXrQUEV9gqe
+dHxYUsTB32Q2d9rbZPmm3dqv2Grx+GDscjOExhEw8xeS1S4Q7zetM6XLMIoy9XKPzMrzsfgMTrpE
+NJPoQdES4orprzZRLsd89mZbhnbOlxUm1tejlMAv5SXkGotq8M/81x9HIy+wVXUzBl5yic44wgMU
+Q9h1yyx2WBaXDprcjrbT8WhrI55c6sZaXezKtPlOwWI9dmqKsWhO1URSR5eDDsbQrbV7meRmylGd
+QAG5E3BYBlBeF72/P80JE46CI5fTGSUFYM62kCePtk3QOjgGNeOqBkilxdXJTUJsEx4vMUNKXKZv
+s0DyuHo+c9ZTaymZVV6Jr1EdMJINSX5Xb/9PwdFumnUoBmlA9yoTuu8XzBrkFQC06gU/7B0+Nuhq
+Iv7GoAV9g2e/nhjZcRs1LTYso1r0AeLNkb3w8+u479oQDYmwfFZRUc+cpU4lrvJBwe0KgOcuqaX4
+vmYlFTUWIdn//HQw2br2Qk2mljNepagU4f5HpYaCN7juhQ1sV5XXKUJji9Qa7d2+h8SKgYUGzIvD
+cgTp6wJVD3NtBnEC1xgQQk6QkK3wsXWfh+hD</X509Certificate>
+              </X509Data>
+            </KeyInfo>
+          </Signature>
+        </eSocial>
+      </evento>
+    </eventos>
+  </envioLoteEventos>
+</eSocial>
+
+08-02-2018 09:56:00.858 [DefaultMessageListenerContainer-1] DEBUG c.arterh.esocial.EmissorLoteEventos.enviaLoteEventos - 
+<?xml version="1.0" encoding="UTF-8"?><eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/retornoEnvio/v1_1_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <retornoEnvioLoteEventos>
+    <status>
+      <cdResposta>401</cdResposta>
+      <descResposta>Lote Incorreto - Erro preenchimento.</descResposta>
+      <ocorrencias>
+        <ocorrencia>
+          <codigo>607</codigo>
+          <descricao>O número de inscrição do transmissor deverá ser igual ao CNPJ/CPF do certificado utilizado para o envio do lote.</descricao>
+          <tipo>1</tipo>
+          <localizacao>/eSocial/envioLoteEventos/ideTransmissor/nrInsc</localizacao>
+        </ocorrencia>
+      </ocorrencias>
+    </status>
+  </retornoEnvioLoteEventos>
+</eSocial>
+
+08-02-2018 09:56:00.862 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes -  
+08-02-2018 09:56:00.862 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - Retorno do processamento do lote de eventos.
+08-02-2018 09:56:00.863 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Código de resposta do governo: 401
+08-02-2018 09:56:00.863 [DefaultMessageListenerContainer-1] INFO  c.arterh.esocial.GravadorBancoDados.gravaRetornoEnvioLotes - 	Descrição da resposta: Lote Incorreto - Erro preenchimento.
