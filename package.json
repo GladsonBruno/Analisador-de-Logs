@@ -4,12 +4,12 @@
   "description": "Ferramenta para análise de logs",
   "main": "main.js",
   "build": {
-    "appId": "com.example.configuradorMensageriaArkhi",
-    "productName": "EditorVisualYML",
+    "appId": "com.example.AnalisadorDeLogs",
+    "productName": "AnalisadorDeLogs",
     "publish": [
       {
         "provider": "github",
-        "repo": "Editor_YAML_Mensageria",
+        "repo": "Analisador-de-Logs",
         "owner": "GladsonBruno"
       }
     ],
