@@ -15,17 +15,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="node_modules/material-icons/iconfont/maaterial-icons.css"/>
 </head>
 <body>
     <nav>
         <div class="nav-wrapper cyan darken-3">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="index.html">Analisador de LOGS</a></li>
+                <li><a href="index.html">Pesquisar Outro ID</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="page">
+    <div class="page hide">
         <div class="page__demo">
             <div class="main-container page__container">
                 <div class="timeline">
@@ -43,5 +44,8 @@
       
     <script src="../scripts/hammer.min.js" onload="window.Hammer = module.exports;"></script>
     <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+        PesquisarPorID();
+    </script>
 </body>
 </html>

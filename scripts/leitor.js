@@ -45,9 +45,13 @@ function RetornoConsultaEXP(EXP, Conteudo){
     return novaOcorrencia;
 }
 
-function PesquisarPorID(id){
+function PesquisarPorID(){
     //let exp =  new RegExp("(^.+" + id + ").*", "gm");
 
+    let id = localStorage.getItem("IDLog");
+    let caminhoLog = localStorage.getItem("CaminhoLog");
+    let expPasta = /(^.*)\\.*/;
+    let pastaLog = expPasta.exec(caminhoLog)[1];
     let Evento = new Evento_S(id);
 
     let ExtraidoProcessamento = new RegExp("^.* (Atualizando o ID: "+ id +" .*).*", "gm");
@@ -64,10 +68,10 @@ function PesquisarPorID(id){
 
     let conteudo = [];
 
-    read.createReader('./LOGS/log.log', {
+    read.createReader(caminhoLog, {
         batchLimit: 200000,
         bookmark: {
-            dir: path.resolve('./LOGS/', '.bookmark'),
+            dir: path.resolve(pastaLog + "\\", '.bookmark'),
         }
     })
     .on('readable', function () { this.readLine(); })
@@ -79,113 +83,118 @@ function PesquisarPorID(id){
     .on('end', function (done) {
         let totalLinhas = conteudo.length;
         let IndexOcorrencia = 0;
-        for(var i = 0; i < totalLinhas; i++){
-            
-            if(ExtraidoProcessamento.test(conteudo[i]) == true){
-                Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.push({"Ocorrencia": []});  
-                Evento.Status = "Extraido Processamento";
-                Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(ExtraidoProcessamento, conteudo[i]));
-                if(ID_Enviado.test(conteudo[i + 7]) == true){
-                    
-                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(ID_Enviado, conteudo[i + 7]));
-                    Evento.Status = "Enviando";
-                    console.log(conteudo[i + 10]);
-                    if(conteudo[i + 10].match(Codigo_Resposta_Processamento) != null){
-                        
-                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 10]));
-
-                        if(conteudo[i + 11].match(Descricao_Resposta_Processamento) != null){
-                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 11]));                            
-                            
-                        }                        
-                    }
-                    IndexOcorrencia++;
-                } else {
-                    if(conteudo[i + 3].match(Codigo_Resposta_Processamento) != null){
-                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 3]));
-                        
-                        if(conteudo[i + 4].match(Descricao_Resposta_Processamento) != null){
-                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 4]));                            
-
-                        }                        
-                    }
-                    IndexOcorrencia++;
-                }
-            }
-
-            if(Processamento_Consulta.test(conteudo[i]) == true){
-                Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.push({"Ocorrencia": []});
-                Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Processamento_Consulta, conteudo[i]));
-                Evento.Status = "Consultando Processamento";
+        if(totalLinhas > 0){
+            $(".page").removeClass("hide");
+            for(var i = 0; i < totalLinhas; i++){
                 
-                if(conteudo[i + 1].match(Codigo_Resposta_Processamento) != null){
-                    Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 1]));
-                    Evento.Status = "Processado";
+                if(ExtraidoProcessamento.test(conteudo[i]) == true){
+                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.push({"Ocorrencia": []});  
+                    Evento.Status = "Extraido Processamento";
+                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(ExtraidoProcessamento, conteudo[i]));
+                    if(ID_Enviado.test(conteudo[i + 7]) == true){
                         
-                    if(conteudo[i + 2].match(Descricao_Resposta_Processamento) != null){
-                        Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 2]));                            
-                        if(conteudo[i + 3].match(Status_EventoProcessado) != null){
-                            Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 3]));
-                            /*
-                            if(conteudo[i + 19].match(Status_EventoProcessado) != null   ){
-                                Evento.CicloDeVida.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 19]));
+                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(ID_Enviado, conteudo[i + 7]));
+                        Evento.Status = "Enviando";
+                        console.log(conteudo[i + 10]);
+                        if(conteudo[i + 10].match(Codigo_Resposta_Processamento) != null){
+                            
+                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 10]));
+    
+                            if(conteudo[i + 11].match(Descricao_Resposta_Processamento) != null){
+                                Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 11]));                            
+                                
+                            }                        
+                        }
+                        IndexOcorrencia++;
+                    } else {
+                        if(conteudo[i + 3].match(Codigo_Resposta_Processamento) != null){
+                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 3]));
+                            
+                            if(conteudo[i + 4].match(Descricao_Resposta_Processamento) != null){
+                                Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 4]));                            
+    
+                            }                        
+                        }
+                        IndexOcorrencia++;
+                    }
+                }
+    
+                if(Processamento_Consulta.test(conteudo[i]) == true){
+                    Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.push({"Ocorrencia": []});
+                    Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Processamento_Consulta, conteudo[i]));
+                    Evento.Status = "Consultando Processamento";
+                    
+                    if(conteudo[i + 1].match(Codigo_Resposta_Processamento) != null){
+                        Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 1]));
+                        Evento.Status = "Processado";
+                            
+                        if(conteudo[i + 2].match(Descricao_Resposta_Processamento) != null){
+                            Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 2]));                            
+                            if(conteudo[i + 3].match(Status_EventoProcessado) != null){
+                                Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 3]));
+                                /*
+                                if(conteudo[i + 19].match(Status_EventoProcessado) != null   ){
+                                    Evento.CicloDeVida.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 19]));
+                                }
+                                */
                             }
-                            */
                         }
                     }
+                    IndexOcorrencia++;
                 }
-                IndexOcorrencia++;
+                
             }
             
+            let ocorrencia;
+                
+                $(".conteudo").append(ocorrencia);
+                console.log(Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.length);
+                for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.length; i++){
+                    let hora = Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
+                    ocorrencia = `
+                        <div class="timeline__box">
+                            <div class="timeline__date">
+                                <span class="timeline__hora"> Ocorrência </span>
+                                <span class="timeline__hora"> `+ hora +` </span>
+                            </div>
+                            <div class="timeline__post">
+                            <div class="timeline__content" id="EventoNegocio0`+ i +`">
+                            </div>
+                            </div>
+                        </div>
+                        `;
+                    $(".conteudo").append(ocorrencia);
+    
+                    for(var j = 0; j < Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia.length; j++){
+                        $("#EventoNegocio0" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
+                    }
+                }
+            
+            
+                for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.length; i++){
+                    let hora = Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
+                    ocorrencia = `
+                        <div class="timeline__box">
+                            <div class="timeline__date">
+                                <span class="timeline__hora"> Ocorrencia </span>
+                                <span class="timeline__hora"> `+ hora  +` </span>
+                            </div>
+                            <div class="timeline__post">
+                            <div class="timeline__content" id="EventoNegocio0`+ i +`">
+                            </div>
+                            </div>
+                        </div>
+                        `;
+                    $(".conteudo").append(ocorrencia);                
+    
+                    for(var j = 0; j < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia.length; j++){
+                        $("#EventoNegocio0" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
+                    }
+                }
+            $(".timeline__year").html("").html(id);
+        } else {
+            alert("nada");
         }
         
-        let ocorrencia;
-            
-            $(".conteudo").append(ocorrencia);
-            console.log(Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.length);
-            for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.length; i++){
-                let hora = Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
-                ocorrencia = `
-                    <div class="timeline__box">
-                        <div class="timeline__date">
-                            <span class="timeline__hora"> Ocorrência </span>
-                            <span class="timeline__hora"> `+ hora +` </span>
-                        </div>
-                        <div class="timeline__post">
-                        <div class="timeline__content" id="EventoNegocio0`+ i +`">
-                        </div>
-                        </div>
-                    </div>
-                    `;
-                $(".conteudo").append(ocorrencia);
-
-                for(var j = 0; j < Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia.length; j++){
-                    $("#EventoNegocio0" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
-                }
-            }
-        
-        
-            for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.length; i++){
-                let hora = Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
-                ocorrencia = `
-                    <div class="timeline__box">
-                        <div class="timeline__date">
-                            <span class="timeline__hora"> Ocorrencia </span>
-                            <span class="timeline__hora"> `+ hora  +` </span>
-                        </div>
-                        <div class="timeline__post">
-                        <div class="timeline__content" id="EventoNegocio0`+ i +`">
-                        </div>
-                        </div>
-                    </div>
-                    `;
-                $(".conteudo").append(ocorrencia);                
-
-                for(var j = 0; j < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia.length; j++){
-                    $("#EventoNegocio0" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
-                }
-            }
-        $(".timeline__year").html("").html(id);
     });
 }
-PesquisarPorID("ID1040984700000002018041415415100002");

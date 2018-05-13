@@ -48,13 +48,21 @@ function CarregarLOG(){
 }
 
 function RedirecionaPaginaAnalisar(){
+    var error = "";
     if($("#caminho-log").val() == ""){
-        alert("Insira o caminho do log");
-    } else {
+        error += "Insira o caminho do log";
+    } if($("#id_analisado").val() == ""){
+        error += "<br/>Insira o id a ser pesquisado";
+    }
+    if(error == ""){
         localStorage.setItem("CaminhoLog", $("#caminho-log").val());
+        localStorage.setItem("IDLog", $("#id_analisado").val());
         ShowLoader();
         setInterval(()=> {
             window.location.assign("../pages/RetornoPesquisa.html");
-        }, 1200);   
+        }, 1200);
+    }
+    else {
+        alert(error);
     }
 }

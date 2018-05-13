@@ -102,8 +102,9 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.3.1",
-    "safe-log-reader": "^1.0.8",
-    "materialize-css": "^1.0.0-beta"
+    "material-icons": "^0.2.3",
+    "materialize-css": "^1.0.0-beta",
+    "safe-log-reader": "^1.0.8"
   },
   "devDependencies": {
     "7zip-bin": "^3.1.0",
