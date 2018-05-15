@@ -19,7 +19,7 @@
 </head>
 <body>
     <nav>
-        <div class="nav-wrapper cyan darken-3">
+        <div class="nav-wrapper cyan accent-4">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="#">Analisador de LOGS</a></li>
             </ul>
@@ -33,13 +33,13 @@
                 <label for="caminho-log">Caminho Certificado</label>
                 <input type="text" placeholder="Caminho LOG" class='col m9' disabled id="caminho-log" required>
                 <span class="helper-text" data-error="" data-success=""></span>
-                <button class="btn" class="col m2" id="btn-carregar-log" onclick="CarregarLOG()">Carregar Arquivo de LOG</button>
+                <button class="col m2 waves-effect waves-light btn light-blue accent-3 white-text" id="btn-carregar-log" onclick="CarregarLOG()">Carregar LOG</button>
             </div>
             <div class="input-field col m12">
                 <label for="ID_Analisado">ID a ser analisado</label>
                 <input type="text" placeholder="ID a ser analisado" class='col m9' id="id_analisado" required>
                 <span class="helper-text" data-error="" data-success=""></span>
-                <a onclick="RedirecionaPaginaAnalisar()" id="btn-analisar" class="col m2 waves-effect waves-light btn-flat blue darken-1 white-text center">Analisar</a>
+                <a onclick="RedirecionaPaginaAnalisar()" id="btn-analisar" class="col m2 waves-effect waves-light btn-flat light-blue accent-3 white-text center">Analisar</a>
             </div>
         </div>
     </div>
@@ -60,6 +60,8 @@
     </div>
     <!-- Fim Modal Erro -->
 
-    
+    <script>
+        $('.modal').modal();
+    </script>
 </body>
 </html>

@@ -4,7 +4,8 @@ const boxDialog = electron_remote.dialog;
 $(document).ready(function(){
 
     ShowLoader();
-
+    //Modal não aceita edição via css
+    //$(".modal-body").css("padding-left", "30px");
 });
 
 function ShowLoader(){
@@ -63,6 +64,7 @@ function RedirecionaPaginaAnalisar(){
         }, 1200);
     }
     else {
-        alert(error);
+        $("#modalErro").find(".modal-body").html("").html(error);
+        $("#modalErro").modal('open');
     }
 }
