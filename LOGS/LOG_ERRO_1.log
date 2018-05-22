@@ -8944,7 +8944,7 @@ Ação Sugerida: Verificar se o evento informado e a versão do leiaute estão d
                 <protocoloEnvioLote>1.1.201804.0000000000009830703</protocoloEnvioLote>
               </recepcao>
               <processamento>
-                <cdResposta>402</cdResposta>
+                cdResposta>402</cdResposta>
                 <descResposta>Schema do evento inválido.</descResposta>
                 <versaoAppProcessamento>8.0.1-A2956</versaoAppProcessamento>
                 <dhProcessamento>2018-04-22T20:55:50.98</dhProcessamento>

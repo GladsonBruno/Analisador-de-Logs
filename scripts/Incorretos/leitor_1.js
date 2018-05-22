@@ -10,12 +10,6 @@ class Evento_S {
         this.CicloDeVida = {
             "EventoNegocio_Case1": {
                 "Ocorrencias": []
-            },
-            "EventoNegocio_Case2": {
-                "Ocorrencias": []
-            },
-            "EventoNegocio_Case3": {
-                "Ocorrencias": []
             }
         };
     }
@@ -161,9 +155,7 @@ function PesquisarPorID(){
                         }
                         IndexOcorrencia++;
                     }
-                }
-
-                if(ID_Enviado.test(conteudo[i]) == true){
+                } else if(ID_Enviado.test(conteudo[i]) == true){
                     Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.push({"Ocorrencia": []});  
                     Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(ID_Enviado, conteudo[i]));
                     Evento.Status = "Enviando";
@@ -174,24 +166,29 @@ function PesquisarPorID(){
                         if(conteudo[i + 4].match(Descricao_Resposta_Processamento) != null){
                             Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 4]));                            
                             
+                        }                       
+                    } else if(conteudo[i + 4].match(Codigo_Resposta_Processamento) != null){
+                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 4]));
+
+                        if(conteudo[i + 5].match(Descricao_Resposta_Processamento) != null){
+                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 5]));                            
+                            
                         }                        
                     }
                     IndexOcorrencia++;
-                }
-    
-                if(Processamento_Consulta.test(conteudo[i]) == true){
-                    Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.push({"Ocorrencia": []});
-                    Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia_2].Ocorrencia.push(RetornoConsultaEXP(Processamento_Consulta, conteudo[i]));
+                } else if(Processamento_Consulta.test(conteudo[i]) == true){
+                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.push({"Ocorrencia": []});
+                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Processamento_Consulta, conteudo[i]));
                     Evento.Status = "Consultando Processamento";
                     
                     if(conteudo[i + 1].match(Codigo_Resposta_Processamento) != null){
-                        Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia_2].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 1]));
+                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 1]));
                         Evento.Status = "Processado";
                             
                         if(conteudo[i + 2].match(Descricao_Resposta_Processamento) != null){
-                            Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia_2].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 2]));                            
+                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 2]));                            
                             if(conteudo[i + 3].match(Status_EventoProcessado) != null){
-                                Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[IndexOcorrencia_2].Ocorrencia.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 3]));
+                                Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 3]));
                                 /*
                                 if(conteudo[i + 19].match(Status_EventoProcessado) != null   ){
                                     Evento.CicloDeVida.push(RetornoConsultaEXP(Status_EventoProcessado, conteudo[i + 19]));
@@ -200,29 +197,27 @@ function PesquisarPorID(){
                             }
                         }
                     }
-                    IndexOcorrencia_2++;
-                }
-                
-                if(Erro_Montagem_Evento.test(conteudo[i]) == true){
-                    Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias.push({"Ocorrencia": []});
+                    IndexOcorrencia++;
+                }else if(Erro_Montagem_Evento.test(conteudo[i]) == true){
+                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias.push({"Ocorrencia": []});
                     if(Erro_Montagem_XML.test(conteudo[i -1]) == true){
-                        Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[IndexOcorrencia_3].Ocorrencia.push(RetornoConsultaEXPErro(Erro_Montagem_XML, conteudo[i - 1]));
+                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXPErro(Erro_Montagem_XML, conteudo[i - 1]));
                     }
-                    Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[IndexOcorrencia_3].Ocorrencia.push(RetornoConsultaEXPErro(Erro_Montagem_Evento, conteudo[i]));
+                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXPErro(Erro_Montagem_Evento, conteudo[i]));
                     if(XML_Causador_Falha.test(conteudo[i + 1]) == true){
-                        Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[IndexOcorrencia_3].Ocorrencia.push(RetornoConsultaEXPErro(XML_Causador_Falha, conteudo[i + 1]));
+                        Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXPErro(XML_Causador_Falha, conteudo[i + 1]));
                         
                         if(ID_Enviado.test(conteudo[i + 8]) == true){
                         
-                            Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[IndexOcorrencia_3].Ocorrencia.push(RetornoConsultaEXP(ID_Enviado, conteudo[i + 8]));
+                            Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(ID_Enviado, conteudo[i + 8]));
                             Evento.Status = "Enviando";
                             
                             if(conteudo[i + 11].match(Codigo_Resposta_Processamento) != null){
                                 
-                                Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[IndexOcorrencia_3].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 11]));
+                                Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Codigo_Resposta_Processamento, conteudo[i + 11]));
         
                                 if(conteudo[i + 12].match(Descricao_Resposta_Processamento) != null){
-                                    Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[IndexOcorrencia_3].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 12]));                            
+                                    Evento.CicloDeVida.EventoNegocio_Case1.Ocorrencias[IndexOcorrencia].Ocorrencia.push(RetornoConsultaEXP(Descricao_Resposta_Processamento, conteudo[i + 12]));                            
                                     
                                 }                        
                             }
@@ -232,7 +227,7 @@ function PesquisarPorID(){
 
                     
 
-                    IndexOcorrencia_3++;
+                    IndexOcorrencia++;
                 }
                 
             }
@@ -267,63 +262,8 @@ function PesquisarPorID(){
                 $(".timeline__year").html("").html(id);
                 
             }
-            if(Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.length > 0){
-                //Mostrando div que contem o timeline
-                if($(".page").hasClass("hide") == true){
-                    $(".page").removeClass("hide");
-                }
-                for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias.length; i++){
-                    let hora = Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
-                    ocorrencia = `
-                        <div class="timeline__box">
-                            <div class="timeline__date">
-                                <span class="timeline__hora"> Ocorrencia </span>
-                                <span class="timeline__hora"> `+ hora  +` </span>
-                            </div>
-                            <div class="timeline__post">
-                            <div class="timeline__content" id="EventoNegocio02_`+ i +`">
-                            </div>
-                            </div>
-                        </div>
-                        `;
-                    $(".conteudo").append(ocorrencia);                
-    
-                    for(var j = 0; j < Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia.length; j++){
-                        $("#EventoNegocio02_" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case2.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
-                    }
-                }
-                $(".timeline__year").html("").html(id);
-            }
-
-            if(Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias.length > 0){
-                //Mostrando div que contem o timeline
-                if($(".page").hasClass("hide") == true){
-                    $(".page").removeClass("hide");
-                }
-                for(i = 0; i < Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias.length; i++){
-                    let hora = Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[i].Ocorrencia[0].HoraCompleta;
-                    ocorrencia = `
-                        <div class="timeline__box">
-                            <div class="timeline__date">
-                                <span class="timeline__hora"> Ocorrencia </span>
-                                <span class="timeline__hora"> `+ hora  +` </span>
-                            </div>
-                            <div class="timeline__post">
-                            <div class="timeline__content" id="EventoNegocio02_`+ i +`">
-                            </div>
-                            </div>
-                        </div>
-                        `;
-                    $(".conteudo").append(ocorrencia);                
-    
-                    for(var j = 0; j < Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[i].Ocorrencia.length; j++){
-                        $("#EventoNegocio02_" + i).append("<p>" + Evento.CicloDeVida.EventoNegocio_Case3.Ocorrencias[i].Ocorrencia[j].Descricao + "</p>");
-                    }
-                }
-                $(".timeline__year").html("").html(id);
-            }
             
-            if(IndexOcorrencia == 0 && IndexOcorrencia_2 == 0 && IndexOcorrencia_3 == 0) {
+            if(IndexOcorrencia == 0) {
                 $("#card_nenhum_resultado").removeClass("hide");
                 $(".id_pesquisado").html("").html(id);
             }
