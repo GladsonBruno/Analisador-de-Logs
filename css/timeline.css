@@ -15,7 +15,7 @@
   
     position: absolute;
     top: 0;
-    margin-left: 8px;
+    margin-left: 15px;
   }
   
   .timeline__group{
@@ -40,15 +40,21 @@
   
   .timeline__box{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .timeline__box:not(:last-of-type){
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .timeline__box:before{
     content: "";
-    width: 100%;
+    width: 150px;
     height: 2px;
     background-color: var(--uiTimelineMainColor);
   
@@ -142,7 +148,7 @@
   }
   
   .timeline{
-    --timelineMainColor: #4557bb;
+    --timelineMainColor: #42a5f5;
     font-size: 16px;
   }
   
