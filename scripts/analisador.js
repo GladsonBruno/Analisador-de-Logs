@@ -100,7 +100,7 @@ function PesquisarPorID(){
         //Verifica status Enviado
         } else if(line.match(ID_Enviado) != null){
 
-            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("ID Sendo enviado");
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Enviando evento S");
             Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(ExtraidoProcessamento, line));
             indexOcorrencia++;
             Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] })
