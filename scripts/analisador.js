@@ -63,6 +63,7 @@ function PesquisarPorID(){
     //Verifica se a linha não tem tags xml
     let NaoXML = /^.*(\<)|(\>).*/gm;
     let FalhaMontagemXML = new RegExp("^.*ID:(" + id + " apresentou problemas na montagem do XML.*)", "gm");
+    let FalhaSerpro = /^.*Falha no acesso ao servidor do SERPRO.*/gm;
 
     //Pegar data e hora do processamento
     // /^.*<(dhProcessamento>)(\d{4})-(\d{2})-(\d{2})T(.{8}).*\<\/\1/
@@ -131,7 +132,7 @@ function PesquisarPorID(){
             } catch(e) {
                 resposta = CodigoResposta.exec(line)[2];
             }
-
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Retorno do Processamento do evento S");
             Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Código de Resposta: " + resposta);
 
         // IniciarBuscaRetorno = Verifica se está entre as linhas com o retorno do XML
@@ -146,6 +147,7 @@ function PesquisarPorID(){
         } else if (IniciarBuscaRetorno == true && line.match(TipoOcorrencia) != null){
             
             var tipo = TipoOcorrencia.exec(line)[2];
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Ocorrências Retornadas:")
             Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Ocorrência tipo: " + tipo);
 
         // IniciarBuscaRetorno = Verifica se está entre as linhas com o retorno do XML
@@ -191,10 +193,19 @@ function PesquisarPorID(){
             } catch(e){
                 retornoFalhaXML = FalhaMontagemXML.exec(line)[1];
             }
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Falha no processamento do XML de um evento S");
             Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(retornoFalhaXML);
             Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaMontagemXML, line));
             indexOcorrencia++;
             Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] })
+        } else if ( line.search(FalhaSerpro) == 0 ){
+
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Falha no acesso ao Servidor Serpro");
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Verifique a conexão de Internet, regras de firewall e afins.");
+            Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaSerpro, line));
+            indexOcorrencia++;
+            Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] })
+
         }
     })
     .on('end', function (done) {
@@ -226,7 +237,7 @@ function PesquisarPorID(){
                 }
             }
             
-            $(".timeline__year").html("").html(id);
+            $(".timeline__year").html("").html(id + "<br><span class='tipo-evento'>Tipo Evento: 1030</span>");
         }
         
         console.log(Evento.CicloDeVida)
