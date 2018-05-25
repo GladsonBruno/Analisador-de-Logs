@@ -1,6 +1,7 @@
 var read = require('safe-log-reader');
 var path = require('path');
 
+
 class Evento_S {
 
     constructor(id){
@@ -30,10 +31,36 @@ class Evento_S {
     };
 }
 
+function ShowLoader(){
+    var loader = `<div class='container center'>
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    `;
+
+    M.toast({
+        html: loader,
+        timeRemaining: 200,
+        displayLength: 1000,
+        classes: 'container center transparent'
+    });
+}
+
 function PesquisarPorID(){
     //let exp =  new RegExp("(^.+" + id + ").*", "gm");
 
-    
+    ShowLoader();   
     
     let id = localStorage.getItem("IDLog");
     
@@ -64,9 +91,17 @@ function PesquisarPorID(){
     let NaoXML = /^.*(\<)|(\>).*/gm;
     let FalhaMontagemXML = new RegExp("^.*ID:(" + id + " apresentou problemas na montagem do XML.*)", "gm");
     let FalhaSerpro = /^.*Falha no acesso ao servidor do SERPRO.*/gm;
+    let FalhaDecifragemCertificado_E_SERPRO = /^.*(Falha na decifragem dos certificados do governo e serpro.*)/;
+    let FalhaDecifragemCertificado_Application_YML = /^.*(Falha na decifragem da chave do certificado no arquivo Application.*)(Segredo ou chave invalida.*)/;
+    let FalhaSocketSeguro = /^.*(Falha na criação do soquete seguro. Problemas nas chaves ou certificado.).*/;
+    //let LoteIgnorado = new RegExp("^.*(Lote de eventos ignorado):(Conteudo do lote:).*"+ id +".*", "gm");
+    let LoteIgnorado = /^.*Lote de eventos ignorado.*/gm;
+    let ConteudoLote = new RegExp("^.*Conteudo do lote: .*"+ id +".*");
+    let VerificarLoteIgnorado = false;
+    let NenhumaOcorrencia = true;
 
     //Pegar data e hora do processamento
-    // /^.*<(dhProcessamento>)(\d{4})-(\d{2})-(\d{2})T(.{8}).*\<\/\1/
+    let DataHoraProcessamento = /^.*<(dhProcessamento>)(\d{4})-(\d{2})-(\d{2})T(.{8}).*\<\/\1/
 
     let IniciarBuscaRetorno = false;
 
@@ -97,6 +132,8 @@ function PesquisarPorID(){
             Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("ID atualizado na base de dados para Extraído para processamento");
             Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(ExtraidoProcessamento, line));
 
+            NenhumaOcorrencia = false;
+
         //Verifica status Enviado
         } else if(line.match(ID_Enviado) != null){
 
@@ -105,27 +142,31 @@ function PesquisarPorID(){
             indexOcorrencia++;
             Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] })
 
+            NenhumaOcorrencia = false;
+
         //Verifica se a linha é o início do XML com o processamento do evento
         } else if(line.match(RetornoID) != null){
 
             IniciarBuscaRetorno = true;
             Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": []})
 
+            NenhumaOcorrencia = false;
+
         //Verifica se é o Fim do retorno do evento no XML
         } else if( line.match(FimRetornoID) != null && IniciarBuscaRetorno == true){
 
             IniciarBuscaRetorno = false;
-            
+
+            NenhumaOcorrencia = false;
+            indexOcorrencia++;
+        } else if( DataHoraProcessamento.test(line) == true && IniciarBuscaRetorno == true){
+            let HoraCompleta = DataHoraProcessamento.exec(line)[5];
+            Evento.CicloDeVida.DataHora.push({ "HoraCompleta": HoraCompleta });
 
         // IniciarBuscaRetorno = Verifica se está entre as linhas com o retorno do XML
-        //Verifica o Código de Resposta do evento
-        } else if( Processamento_Consulta.test(line) == true ){
-
-            Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(Processamento_Consulta, line));
-            indexOcorrencia++;
-
+        //Verifica o codigo de resposta
         } else if(IniciarBuscaRetorno == true && line.search(CodigoResposta) != -1 ){
-
+            
             var resposta;
             try {
                 resposta = CodigoResposta.exec(line)[2];
@@ -198,46 +239,108 @@ function PesquisarPorID(){
             Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaMontagemXML, line));
             indexOcorrencia++;
             Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] })
+
+            NenhumaOcorrencia = false;
+
         } else if ( line.search(FalhaSerpro) == 0 ){
 
             Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Falha no acesso ao Servidor Serpro");
             Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Verifique a conexão de Internet, regras de firewall e afins.");
             Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaSerpro, line));
             indexOcorrencia++;
-            Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] })
+            Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] });
 
+        } else if ( line.search(FalhaDecifragemCertificado_E_SERPRO) == 0 ) {
+            let Falha = FalhaDecifragemCertificado_E_SERPRO.exec(line)[1];
+            let Verificar = FalhaDecifragemCertificado_E_SERPRO.exec(line)[2];
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(Falha);
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(Verificar);
+            Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaDecifragemCertificado_E_SERPRO, line));
+            indexOcorrencia++;
+            Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] });
+        } else if( line.search(FalhaDecifragemCertificado_Application_YML) == 0 ){
+            let Falha = FalhaDecifragemCertificado_Application_YML.exec(line)[1];
+            let Motivo = FalhaDecifragemCertificado_Application_YML.exec(line)[2];
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(Falha);
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Motivo:");
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(Motivo);
+            Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaDecifragemCertificado_Application_YML, line));
+            indexOcorrencia++;
+            Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] });
+        } else if(line.search(LoteIgnorado) == 0){
+            VerificarLoteIgnorado = true;
+        } else if( VerificarLoteIgnorado == true ){
+            if(line.search(ConteudoLote) == 0){
+                let Mensagem = "Conteúdo do Lote: " + id;
+                Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push("Lote Ignorado");
+                Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(Mensagem);
+                Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(ConteudoLote, line));
+                indexOcorrencia++;
+                Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] });
+                VerificarLoteIgnorado = false;
+                NenhumaOcorrencia = false;
+            }
+        }
+        
+        else if( line.search(FalhaSocketSeguro) == 0 ){
+            let Falha = FalhaSocketSeguro.exec(line)[1];
+            Evento.CicloDeVida.Ocorrencias[indexOcorrencia].Ocorrencia.push(Falha);
+            Evento.CicloDeVida.DataHora.push(Evento.GetDataHora(FalhaSocketSeguro, line));
+            indexOcorrencia++;
+            Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": [] });
         }
     })
     .on('end', function (done) {
         if(Evento.CicloDeVida.Ocorrencias.length > 0){
-            
-            //Mostrando div que contem o timeline
+            if(NenhumaOcorrencia != true) {
+                //Mostrando div que contem o timeline
             if($(".page").hasClass("hide") == true){
                 $(".page").removeClass("hide");
             }
 
-            for(i = 0; i < Evento.CicloDeVida.Ocorrencias.length - 1; i++){
-                let hora = Evento.CicloDeVida.DataHora[i].HoraCompleta;
-                ocorrencia = `
-                    <div class="timeline__box">
-                        <div class="timeline__date">
-                            <span class="timeline__hora"> Ocorrência </span>
-                            <span class="timeline__hora"> `+ hora +` </span>
-                        </div>
-                        <div class="timeline__post">
-                        <div class="timeline__content" id="EventoNegocio01_`+ i +`">
-                        </div>
-                        </div>
-                    </div>
-                    `;
-                $(".conteudo").append(ocorrencia);
+            let TamanhoOcorrencias = Evento.CicloDeVida.Ocorrencias.length;
+            let TamanhoDatas = Evento.CicloDeVida.DataHora.length;
+            
+            console.log(Evento);
 
-                for(var j = 0; j < Evento.CicloDeVida.Ocorrencias[i].Ocorrencia.length; j++){
-                    $("#EventoNegocio01_" + i).append("<p>" + Evento.CicloDeVida.Ocorrencias[i].Ocorrencia[j] + "</p>");
-                }
+            if(TamanhoOcorrencias > TamanhoDatas && TamanhoOcorrencias > 1){
+                TamanhoOcorrencias = TamanhoOcorrencias -1;
+            }
+
+            for(i = 0; i < TamanhoOcorrencias; i++){
+                
+                let hora = Evento.CicloDeVida.DataHora[i].HoraCompleta;
+                    if(hora != null || hora != undefined || hora != ""){
+                        if(Evento.CicloDeVida.Ocorrencias[i].Ocorrencia.length > 0){
+                            ocorrencia = `
+                            <div class="timeline__box">
+                                <div class="timeline__date">
+                                    <span class="timeline__hora"> Ocorrência </span>
+                                    <span class="timeline__hora"> `+ hora +` </span>
+                                </div>
+                                <div class="timeline__post">
+                                <div class="timeline__content" id="EventoNegocio01_`+ i +`">
+                                </div>
+                                </div>
+                            </div>
+                            `;
+                            $(".conteudo").append(ocorrencia);
+                            for(var j = 0; j < Evento.CicloDeVida.Ocorrencias[i].Ocorrencia.length; j++){
+                                $("#EventoNegocio01_" + i).append("<p>" + Evento.CicloDeVida.Ocorrencias[i].Ocorrencia[j] + "</p>");
+                            }
+                        }
+                    }
             }
             
-            $(".timeline__year").html("").html(id + "<br><span class='tipo-evento'>Tipo Evento: 1030</span>");
+            $(".timeline__year").html("").html(id);
+            } else {
+                $("#card_nenhum_resultado").removeClass("hide");
+                $(".id_pesquisado").html("").html(id);
+            }
+            
+        } else {
+            $("#card_nenhum_resultado").removeClass("hide");
+            $(".id_pesquisado").html("").html(id);
         }
         
         console.log(Evento.CicloDeVida)
