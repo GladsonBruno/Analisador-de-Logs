@@ -36,7 +36,7 @@
       "icon": "assets/icons/linux",
       "packageCategory": "utils",
       "maintainer": "Gladson Bruno",
-      "targets": [{
+      "target": [{
         "target": "rpm",
         "arch": ["ia32", "x64"]
       },{
