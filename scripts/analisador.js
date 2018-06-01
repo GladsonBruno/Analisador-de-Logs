@@ -143,7 +143,7 @@ function PesquisarPorID(){
     Evento.CicloDeVida.Ocorrencias.push({"Ocorrencia": []})
 
     read.createReader(caminhoLog, {
-        batchLimit: 200000,
+        batchLimit: 20000000,
         bookmark: {
             dir: path.resolve(pastaLog, '.bookmark'),
         }
