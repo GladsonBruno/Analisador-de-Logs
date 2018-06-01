@@ -36,9 +36,14 @@
       "icon": "assets/icons/linux",
       "packageCategory": "utils",
       "maintainer": "Gladson Bruno",
-      "target": [
-        "rpm",
-        "deb"
+      "targets": [{
+        "target": "rpm",
+        "arch": ["ia32", "x64"]
+      },{
+        "target": "deb",
+        "arch": ["ia32", "x64"]
+      }
+        
       ],
       "synopsis": "Software Fazer alterações em arquivos YML da Mensageria graficamente."
     },
@@ -95,7 +100,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "pack": "build --dir",
-    "dist": "build -- arch all",
+    "dist": "build --arch all",
     "postinstall": "install-app-deps"
   },
   "author": "Gladson Bruno",
