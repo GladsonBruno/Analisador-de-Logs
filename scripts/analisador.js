@@ -1,6 +1,7 @@
 var read = require('safe-log-reader');
 var path = require('path');
-
+var os = require("os");
+const SistemaOperacional = os.platform().toString();
 
 class Evento_S {
 
@@ -67,8 +68,31 @@ function PesquisarPorID(){
     let Evento = new Evento_S(id);
     
     let caminhoLog = localStorage.getItem("CaminhoLog");
-    let expPasta = /(^.*)\\.*/;
-    let pastaLog = expPasta.exec(caminhoLog)[1];
+    let expPastaWindow = /(^.*)\\.*/;
+    let expPastaLinux = /(^.*)\/.*/;
+    let pastaLog;
+
+    if( SistemaOperacional == "linux" || SistemaOperacional == "darwin"){
+        
+        try {
+            pastaLog = expPastaLinux.exec(caminhoLog)[1]  + "/";    
+        } catch(e){
+            pastaLog = "./"
+        }
+
+    } else if( SistemaOperacional == "win32" || SistemaOperacional.substr(0,3) == "win" ){
+        
+        try {
+            pastaLog = expPasta.exec(caminhoLog)[1] + "\\";
+        } catch(e){
+            pastaLog = "./";
+        }
+
+    } else {
+        pastaLog = "./"
+    }
+
+    
     
     let Log_infos = /^.*\sINFO\s.*/gm;
     let Log_errors = /^.*\sERROR\s.*/gm;
@@ -121,7 +145,7 @@ function PesquisarPorID(){
     read.createReader(caminhoLog, {
         batchLimit: 200000,
         bookmark: {
-            dir: path.resolve(pastaLog + "\\", '.bookmark'),
+            dir: path.resolve(pastaLog, '.bookmark'),
         }
     })
     .on('readable', function () { this.readLine(); })
