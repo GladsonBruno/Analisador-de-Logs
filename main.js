@@ -32,7 +32,9 @@ app.on('ready', () => {
 
 });
 
-
+let menuTemplate = [
+    
+]
 
 app.on('window-all-closed', function(){
     app.quit();
@@ -42,3 +44,23 @@ app.on('will-quit', function(){
     app.quit();
 });
 
+//Adicionar Developer Tools se não for ambiente de Produção
+if(process.env.NODE_ENV !== 'production'){
+    menuTemplate.push({
+        label: 'Developer Tools',
+        submenu: [
+            {
+                label: 'Toggle DevTools',
+                accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q' ,
+                click(item, focusedWindow){
+                    focusedWindow.toggleDevTools();
+                }
+            }, {
+                role: 'reload'
+            }
+        ]
+    })
+}
+
+const menu = Menu.buildFromTemplate(menuTemplate);
+Menu.setApplicationMenu(menu);
